@@ -2,9 +2,42 @@
 import HeroAnimation from '@/components/animations/HeroAnimation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Eye, Gem, Target } from 'lucide-react';
+import { Palette, Globe, LockKeyhole, HeartHandshake, Inspect, RotateCcw, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+
+const coreValues = [
+  {
+    title: "Empathy First",
+    description: "AI interactions are designed with emotional intelligence to support well-being and connection.",
+    icon: HeartHandshake,
+  },
+  {
+    title: "Creativity Unleashed",
+    description: "Users are empowered to express themselves through text, image, and interaction.",
+    icon: Palette,
+  },
+  {
+    title: "Privacy & Security",
+    description: "Data is encrypted, user-owned, and never exploited.",
+    icon: LockKeyhole,
+  },
+  {
+    title: "Global Responsibility",
+    description: "Our technology considers equity, sustainability, and mental health impact.",
+    icon: Globe,
+  },
+  {
+    title: "Transparency",
+    description: "Clear disclosure of how AI and data are used in every product.",
+    icon: Inspect,
+  },
+  {
+    title: "Continuous Reflection",
+    description: "We evolve based on ethical review, community input, and global standards.",
+    icon: RotateCcw,
+  },
+];
 
 export default function HomePage() {
   return (
@@ -16,8 +49,8 @@ export default function HomePage() {
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             MyImaginaryFriends.AI
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground sm:text-xl md:text-2xl">
-            Exploring the frontiers of imagination, creativity, and companionship with cutting-edge AI.
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl md:text-2xl">
+            We create digital tools that empower users to reflect deeply, express creatively, and grow intentionally — all while respecting privacy and ethical standards.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="shadow-lg hover:shadow-primary/50 transition-shadow">
@@ -30,67 +63,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Vision, Mission, Values Section */}
+      {/* Vision & Mission Section */}
       <section className="w-full py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8 mb-12">
             <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="items-center text-center">
-                <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
-                  <Eye className="h-10 w-10" />
-                </div>
-                <CardTitle className="text-2xl font-semibold text-foreground">Our Vision</CardTitle>
+                <CardTitle className="text-3xl font-semibold text-foreground mb-3">Our Vision</CardTitle>
               </CardHeader>
-              <CardContent className="text-center text-muted-foreground">
+              <CardContent className="text-center text-muted-foreground text-lg">
                 <p>
-                  To pioneer a future where AI enhances human creativity and connection, making imagination limitless and accessible to all.
+                  We create human-centered AI that supports emotional well-being, inspires creativity, and fosters empathy across cultures.
+                </p>
+                <p className="mt-2">
+                  We believe everyone — regardless of background, age, or location — should have access to safe, expressive, and empowering technology. Our vision is to build tools that help people connect with themselves and others in more meaningful ways.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="items-center text-center">
-                <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
-                  <Target className="h-10 w-10" />
-                </div>
-                <CardTitle className="text-2xl font-semibold text-foreground">Our Mission</CardTitle>
+                <CardTitle className="text-3xl font-semibold text-foreground mb-3">Our Mission</CardTitle>
               </CardHeader>
-              <CardContent className="text-center text-muted-foreground">
+              <CardContent className="text-center text-muted-foreground text-lg">
                 <p>
-                  To build delightful and responsible AI experiences that inspire, entertain, and empower individuals in their creative journeys.
+                  We build AI companions and creativity tools that promote intentional growth, emotional insight, and imaginative expression — while safeguarding privacy and aligning with global ethical standards for responsible AI.
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="items-center text-center">
-                <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
-                  <Gem className="h-10 w-10" />
-                </div>
-                <CardTitle className="text-2xl font-semibold text-foreground">Our Values</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center text-muted-foreground">
-                <ul className="space-y-2">
-                  <li className="flex items-center justify-center gap-2"><CheckCircle className="h-5 w-5 text-accent" /> Creativity</li>
-                  <li className="flex items-center justify-center gap-2"><CheckCircle className="h-5 w-5 text-accent" /> Responsibility</li>
-                  <li className="flex items-center justify-center gap-2"><CheckCircle className="h-5 w-5 text-accent" /> Innovation</li>
-                  <li className="flex items-center justify-center gap-2"><CheckCircle className="h-5 w-5 text-accent" /> User-centricity</li>
-                </ul>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
+      
+      {/* Core Values Section */}
+      <section className="w-full py-16 md:py-24 bg-primary/5">
+         <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Our Core Values
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {coreValues.map((value) => (
+              <Card key={value.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <CardHeader className="items-center text-center">
+                  <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
+                    <value.icon className="h-10 w-10" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold text-foreground">{value.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center text-muted-foreground flex-grow">
+                  <p>{value.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action / Featured App */}
-      <section className="w-full py-16 md:py-24 bg-primary/5">
+      <section className="w-full py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Meet Bubbas.AI
             </h2>
             <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground">
-              Your friendly AI companion, ready to chat, learn, and grow with you.
+              An emotionally supportive AI journaling and reflection companion.
             </p>
           </div>
           <div className="flex justify-center">
@@ -108,6 +147,20 @@ export default function HomePage() {
               <Link href="/apps-overview#bubbas-ai">Learn More About Bubbas.AI</Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Summary Statement Section */}
+      <section className="w-full py-16 md:py-24 bg-primary/10">
+        <div className="container mx-auto px-4 text-center">
+          <Sparkles className="h-16 w-16 text-primary mx-auto mb-6" />
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
+            MyImaginaryFriends.AI is not just another AI company.
+          </h2>
+          <p className="max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl md:text-2xl mb-8">
+            We're building a future where technology helps people feel more human — not less.
+            Join us as we build tools that help people: Reflect with Bubbas.AI, Express with BubbaSticker.AI, And imagine, with intention.
+          </p>
         </div>
       </section>
     </div>

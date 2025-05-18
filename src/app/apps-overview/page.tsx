@@ -9,34 +9,36 @@ const apps = [
   {
     id: "bubbas-ai",
     name: "Bubbas.AI",
-    tagline: "Your Friendly AI Companion",
-    description: "Engage in meaningful conversations, explore new ideas, and enjoy a personalized AI experience with Bubbas.AI. Designed to be a supportive and insightful friend, Bubbas learns and adapts to your unique personality and interests.",
+    tagline: "Your Emotionally Supportive AI Journal",
+    description: "Bubbas.AI is an emotionally supportive AI journaling and reflection companion. It helps you explore your thoughts and feelings in a safe, private space, offering prompts and insights for personal growth.",
     icon: MessageCircle,
     imageUrl: "https://placehold.co/600x400.png",
-    imageAlt: "Bubbas.AI interface",
-    imageHint: "chatbot interface",
+    imageAlt: "Bubbas.AI interface for journaling",
+    imageHint: "journal app AI",
     features: [
-      "Contextual conversations",
-      "Personalized learning",
-      "Creative brainstorming partner",
-      "Daily check-ins and support",
+      "Supportive journaling prompts",
+      "Guided reflection exercises",
+      "Personalized emotional insights",
+      "Secure and private entries",
+      "Progress tracking (optional)",
     ],
     status: "In Development",
   },
   {
     id: "bubba-sticker-ai",
     name: "BubbaSticker.AI",
-    tagline: "AI-Powered Sticker Generator",
-    description: "Unleash your creativity with BubbaSticker.AI! Generate unique and expressive stickers for your chats and social media. Simply describe your idea, and our AI will bring it to life in sticker form.",
+    tagline: "Unleash Your Inner Artist",
+    description: "BubbaSticker.AI is a fun, expressive image generator for creating unique stickers and visual content. Turn your ideas into playful visuals for chats, social media, and creative projects.",
     icon: Sticker,
     imageUrl: "https://placehold.co/600x400.png",
     imageAlt: "BubbaSticker.AI sticker examples",
-    imageHint: "digital stickers",
+    imageHint: "creative stickers AI",
     features: [
-      "Text-to-sticker generation",
-      "Various art styles",
+      "AI-powered text-to-sticker generation",
+      "Diverse art styles and themes",
       "Customizable sticker packs",
       "Easy export for popular apps",
+      "Daily creative challenges",
     ],
     status: "Coming Soon",
   },
@@ -50,7 +52,7 @@ export default function AppsOverviewPage() {
           Our Creative AI Apps
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground sm:text-xl">
-          Discover the innovative AI-powered applications we're building to spark imagination and joy.
+          Discover the innovative AI-powered applications we're building to spark imagination, support reflection, and bring joy.
         </p>
       </div>
 
@@ -62,8 +64,8 @@ export default function AppsOverviewPage() {
                 <Image
                   src={app.imageUrl}
                   alt={app.imageAlt}
-                  layout="fill"
-                  objectFit="cover"
+                  fill={true}
+                  style={{objectFit: 'cover'}}
                   data-ai-hint={app.imageHint}
                 />
               </div>
