@@ -78,7 +78,7 @@ const organizationSchema = {
   "@type": "Organization",
   "name": "MyImaginaryFriends.AI",
   "url": "https://myimaginaryfriends.ai", // Replace with actual domain if different
-  "logo": "https://myimaginaryfriends.ai/logo.png", // Replace with actual logo URL
+  "logo": "https://myimaginaryfriends.ai/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png", // Replace with actual logo URL
   "description": "MyImaginaryFriends.AI is the parent company of emotionally intelligent and creativity-boosting AI applications. We create digital tools that empower users to reflect deeply, express creatively, and grow intentionally — all while respecting privacy and ethical standards.",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -114,9 +114,11 @@ export default function HomePage() {
             <Button asChild size="lg" className="shadow-lg hover:shadow-primary/50 transition-shadow">
               <Link href="/apps-overview">Discover Our Apps</Link>
             </Button>
+            {/* Removed Try Marketing AI button
             <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-accent/50 transition-shadow">
               <Link href="/marketing-generator">Try Marketing AI</Link>
             </Button>
+            */}
           </div>
         </div>
       </section>

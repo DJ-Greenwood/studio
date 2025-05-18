@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, LayoutGrid, ShieldCheck, Wand2, Dog, Menu } from "lucide-react"; // Changed Sparkles to Dog
+import { Home, LayoutGrid, ShieldCheck, Dog, Menu } from "lucide-react"; // Removed Wand2
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -15,7 +15,7 @@ const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/apps-overview", label: "Apps", icon: LayoutGrid },
   { href: "/responsible-ai", label: "Responsible AI", icon: ShieldCheck },
-  { href: "/marketing-generator", label: "Marketing AI", icon: Wand2 },
+  // { href: "/marketing-generator", label: "Marketing AI", icon: Wand2 }, // Removed this line
 ];
 
 export function Header() {
@@ -43,7 +43,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <img src="/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png" className="h-16 w-16 text-primary" alt="MyImaginaryFriends.AI Logo" /> {/* Changed Sparkles to Dog */}
+          <img src="/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png" className="h-16 w-16 text-primary" alt="MyImaginaryFriends.AI Logo" />
           <span className="text-xl font-bold tracking-tight text-foreground">
             MyImaginaryFriends.AI
           </span>
