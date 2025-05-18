@@ -192,7 +192,7 @@ export default function HomePage() {
           </div>
           <div className="flex justify-center">
             <Image
-              src="https://placehold.co/600x400.png"
+              src="/Bubbas.AI/bubba-sticker-transparent.png"
               alt="Bubbas.AI AI journaling companion app interface preview"
               width={600}
               height={400}
@@ -202,7 +202,7 @@ export default function HomePage() {
           </div>
           <div className="mt-10 text-center">
             <Button asChild size="lg" className="shadow-lg">
-              <Link href="/apps-overview#bubbas-ai">Learn More About Bubbas.AI</Link>
+              <Link href="/apps-overview#bubbas-ai">Learn More About Bubbas.AI and BubbaStickers.AI</Link>
             </Button>
           </div>
         </div>

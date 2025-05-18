@@ -63,6 +63,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico', // Place your favicon.ico in the public folder
     // apple: '/apple-touch-icon.png', // Optional
+    //public/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png
   },
   manifest: '/site.webmanifest', // Optional: For PWA capabilities
 };
