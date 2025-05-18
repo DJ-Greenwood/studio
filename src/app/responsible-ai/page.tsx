@@ -11,8 +11,8 @@ const providerPolicies = [
     optInRequired: "Yes",
     dataRetention: "Up to 30 days",
     policyLinks: [
-      { name: "Enterprise Privacy", url: "https://openai.com/enterprise-privacy" }, // Example URL
-      { name: "Data Usage", url: "https://openai.com/policies/usage-policies" }, // Example URL
+      { name: "Enterprise Privacy", url: "https://openai.com/enterprise-privacy" },
+      { name: "Data Usage", url: "https://openai.com/policies/usage-policies" },
     ],
   },
   {
@@ -21,8 +21,8 @@ const providerPolicies = [
     optInRequired: "Yes",
     dataRetention: "Not specified",
     policyLinks: [
-      { name: "Terms of Service", url: "https://policies.google.com/terms" }, // Example URL
-      { name: "Usage Policies", url: "https://ai.google.dev/terms" }, // Example URL
+      { name: "Terms of Service", url: "https://policies.google.com/terms" },
+      { name: "Usage Policies", url: "https://ai.google.dev/terms" },
     ],
   },
   {
@@ -31,8 +31,8 @@ const providerPolicies = [
     optInRequired: "Not applicable",
     dataRetention: "Until user deletion",
     policyLinks: [
-      { name: "Data Usage Policy", url: "https://dev.hume.ai/docs/privacy-and-data-usage" }, // Example URL
-      { name: "Developer Docs", url: "https://dev.hume.ai/docs" }, // Example URL
+      { name: "Data Usage Policy", url: "https://dev.hume.ai/docs/privacy-and-data-usage" },
+      { name: "Developer Docs", url: "https://dev.hume.ai/docs" },
     ],
   },
 ];
@@ -54,7 +54,7 @@ export default function ResponsibleAIPage() {
             Our Commitment to Responsible AI
           </h1>
           <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
-            At MyImaginaryFriends.AI, we are dedicated to building human-centered AI that supports emotional well-being, inspires creativity, and fosters empathy.
+            At MyImaginaryFriends.AI, we create digital tools that empower users to reflect deeply, express creatively, and grow intentionally — all while respecting privacy and ethical standards.
           </p>
         </header>
 
@@ -93,7 +93,7 @@ export default function ResponsibleAIPage() {
                 <li>Alignment with global ethical standards for AI.</li>
                 <li>Transparency in their AI development and data handling policies.</li>
             </ul>
-            <p>We provide a secure environment for users to engage with these AI tools. What users write, generate, or explore is handled with utmost care for privacy. We aim to choose AI partners that allow us to protect user privacy effectively.</p>
+            <p>We provide a secure environment for users to engage with these AI tools. What users write, generate, or explore is encrypted on their device — we cannot read or access it.</p>
             <p className="mt-3">We are committed to creating a safe space where people can use AI for self-growth, emotional exploration, creative expression, and personal insight. While we don't directly control how foundational AI models are built, we align ourselves with providers that meet our ethical and privacy expectations and advocate for better standards industry-wide.</p>
           </PolicySection>
 
@@ -155,7 +155,7 @@ export default function ResponsibleAIPage() {
         <section className="mt-16 pt-8 border-t text-center">
           <h2 className="text-2xl font-semibold text-foreground mb-3">Contact Us</h2>
           <p className="text-muted-foreground">
-            If you have any questions or concerns about our AI ethics and practices, please don't hesitate to reach out. We value open dialogue and feedback. You can contact us at <a href="mailto:ethics@myimaginaryfriends.ai" className="text-primary hover:underline">ethics@myimaginaryfriends.ai</a>.
+            If you have any questions or concerns about our AI ethics and practices, please don't hesitate to reach out. We value open dialogue and feedback. You can contact us at <a href="mailto:Founder@myimaginaryfriends.ai" className="text-primary hover:underline">Founder@myimaginaryfriends.ai</a>.
           </p>
         </section>
       </div>

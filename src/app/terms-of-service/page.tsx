@@ -67,7 +67,7 @@ export default function TermsOfServicePage() {
               <li>Contact us with any data or ethics concerns</li>
             </ul>
             <p className="mt-3">
-              Email us at: <a href="mailto:hello@myimaginaryfriends.ai" className="text-primary hover:underline">hello@myimaginaryfriends.ai</a>
+              Email us at: <a href="mailto:Founder@myimaginaryfriends.ai" className="text-primary hover:underline">Founder@myimaginaryfriends.ai</a>
             </p>
           </Section>
 
@@ -118,8 +118,8 @@ export default function TermsOfServicePage() {
             <div className="flex items-center gap-2">
               <Mail className="h-5 w-5 text-primary" />
               <span>Email:</span>
-              <a href="mailto:hello@myimaginaryfriends.ai" className="text-primary hover:underline">
-                hello@myimaginaryfriends.ai
+              <a href="mailto:Founder@myimaginaryfriends.ai" className="text-primary hover:underline">
+                Founder@myimaginaryfriends.ai
               </a>
             </div>
             <p className="mt-3 text-muted-foreground">
@@ -159,5 +159,3 @@ function Section({ title, children }: SectionProps) {
     </section>
   );
 }
-
-    
