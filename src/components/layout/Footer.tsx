@@ -19,9 +19,13 @@ export function Footer() {
           <Link href="/responsible-ai" className="hover:text-primary transition-colors">
             Responsible AI Policy
           </Link>
-          {/* Add other footer links here if needed, e.g., Terms of Service, Privacy Policy */}
+          <Link href="/terms-of-service" className="hover:text-primary transition-colors">
+            Terms of Service
+          </Link>
         </div>
       </div>
     </footer>
   );
 }
+
+    
