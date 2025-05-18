@@ -12,9 +12,59 @@ const fontSans = FontSans({
   variable: "--font-sans",
 })
 
+const siteName = "MyImaginaryFriends.AI";
+const siteDescription = "MyImaginaryFriends.AI: Home of Bubbas.AI (emotional support journal) & BubbaSticker.AI (creative sticker generator). Explore ethical AI for reflection, creativity & growth.";
+const siteKeywords = "AI companion, emotional support AI, creative AI tools, journaling app, sticker generator, ethical AI, responsible AI, MyImaginaryFriends.AI, Bubbas.AI, BubbaSticker.AI";
+const baseUrl = new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://myimaginaryfriends.ai');
+
 export const metadata: Metadata = {
-  title: 'MyImaginaryFriends.AI',
-  description: 'Exploring the frontiers of imagination with AI.',
+  metadataBase: baseUrl,
+  title: {
+    default: `${siteName} | Ethical AI Companions & Creative Tools`,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: siteKeywords.split(', '),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: baseUrl.toString(),
+    siteName: siteName,
+    title: `${siteName} | Ethical AI Companions & Creative Tools`,
+    description: siteDescription,
+    images: [
+      {
+        url: '/og-image.png', // Relative to metadataBase
+        width: 1200,
+        height: 630,
+        alt: `${siteName} - Ethical AI for Reflection and Creativity`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${siteName} | Ethical AI Companions & Creative Tools`,
+    description: siteDescription,
+    images: ['/og-image.png'], // Relative to metadataBase
+    // site: '@YourTwitterHandle', // Optional: Add your Twitter handle
+    // creator: '@CreatorTwitterHandle', // Optional
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico', // Place your favicon.ico in the public folder
+    // apple: '/apple-touch-icon.png', // Optional
+  },
+  manifest: '/site.webmanifest', // Optional: For PWA capabilities
 };
 
 export default function RootLayout({
@@ -24,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body 
+      <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased flex flex-col",
           fontSans.variable

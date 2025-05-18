@@ -1,7 +1,41 @@
 
+import type { Metadata } from 'next';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertTriangle, Mail, CheckCircle, FileText } from "lucide-react";
 import Link from "next/link";
+
+const pageTitle = "Terms of Service, Privacy & Ethics Policy";
+const pageDescription = "Read the consolidated Terms of Service, Privacy Policy, and Ethics Policy for MyImaginaryFriends.AI and its applications, including Bubbas.AI and BubbaSticker.AI.";
+const pageKeywords = "terms of service, privacy policy, ethics policy, MyImaginaryFriends.AI terms, user agreement, data rights";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: pageKeywords.split(', '),
+  alternates: {
+    canonical: '/terms-of-service',
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: '/terms-of-service',
+    type: 'article',
+    images: [
+      {
+        url: '/og-terms.png', // Specific OG image for this page
+        width: 1200,
+        height: 630,
+        alt: 'MyImaginaryFriends.AI Terms of Service and Policies',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: ['/og-terms.png'],
+  },
+};
 
 export default function TermsOfServicePage() {
   return (

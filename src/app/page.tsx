@@ -1,4 +1,5 @@
 
+import type { Metadata } from 'next';
 import HeroAnimation from '@/components/animations/HeroAnimation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -39,9 +40,66 @@ const coreValues = [
   },
 ];
 
+const pageTitle = "MyImaginaryFriends.AI | Ethical AI for Reflection & Creativity";
+const pageDescription = "Discover MyImaginaryFriends.AI. We build AI tools like Bubbas.AI (emotional journal) and BubbaSticker.AI (sticker generator) to empower reflection, creativity, and growth, prioritizing privacy and ethics.";
+const pageKeywords = "MyImaginaryFriends.AI, ethical AI, creative AI, Bubbas.AI, BubbaSticker.AI, AI journaling, AI sticker generator, emotional intelligence AI, responsible technology";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: pageKeywords.split(', '),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: '/',
+    type: 'website',
+    images: [
+      {
+        url: '/og-homepage.png', // Specific OG image for homepage if desired, otherwise falls back to layout.tsx
+        width: 1200,
+        height: 630,
+        alt: 'MyImaginaryFriends.AI - Nurturing Creativity and Reflection with AI',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: ['/og-homepage.png'],
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MyImaginaryFriends.AI",
+  "url": "https://myimaginaryfriends.ai", // Replace with actual domain if different
+  "logo": "https://myimaginaryfriends.ai/logo.png", // Replace with actual logo URL
+  "description": "MyImaginaryFriends.AI is the parent company of emotionally intelligent and creativity-boosting AI applications. We create digital tools that empower users to reflect deeply, express creatively, and grow intentionally — all while respecting privacy and ethical standards.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "Founder@myimaginaryfriends.ai",
+    "contactType": "Customer Support"
+  },
+  "sameAs": [
+    // Add social media links here if available
+    // "https://www.instagram.com/yourprofile",
+    // "https://twitter.com/yourprofile"
+  ]
+};
+
+
 export default function HomePage() {
   return (
     <div className="flex flex-col items-center">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative w-full py-20 md:py-32 lg:py-40 bg-gradient-to-br from-primary/20 via-background to-accent/10 overflow-hidden">
         <HeroAnimation />
@@ -94,7 +152,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+
       {/* Core Values Section */}
       <section className="w-full py-16 md:py-24 bg-primary/5">
          <div className="container mx-auto px-4">
@@ -133,13 +191,13 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex justify-center">
-            <Image 
-              src="https://placehold.co/600x400.png" 
-              alt="Bubbas.AI preview" 
-              width={600} 
+            <Image
+              src="https://placehold.co/600x400.png"
+              alt="Bubbas.AI AI journaling companion app interface preview"
+              width={600}
               height={400}
               data-ai-hint="robot companion"
-              className="rounded-xl shadow-2xl" 
+              className="rounded-xl shadow-2xl"
             />
           </div>
           <div className="mt-10 text-center">

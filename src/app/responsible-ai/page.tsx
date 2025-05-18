@@ -1,4 +1,5 @@
 
+import type { Metadata } from 'next';
 import { ShieldCheck, Users, Lock, Brain, AlertTriangle, CheckCircle, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -44,6 +45,39 @@ const brandCommitments = [
   "Opt-out and data deletion available anytime",
 ];
 
+const pageTitle = "Responsible AI & Ethics Policy";
+const pageDescription = "Learn about MyImaginaryFriends.AI's commitment to responsible AI, data privacy, ethical standards, and transparency in our AI applications like Bubbas.AI and BubbaSticker.AI.";
+const pageKeywords = "responsible AI, ethical AI, data privacy, AI transparency, AI safety, MyImaginaryFriends.AI ethics, AI policy";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: pageKeywords.split(', '),
+  alternates: {
+    canonical: '/responsible-ai',
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: '/responsible-ai',
+    type: 'article', // This page is more article-like
+    images: [
+      {
+        url: '/og-responsible-ai.png', // Specific OG image for this page
+        width: 1200,
+        height: 630,
+        alt: 'MyImaginaryFriends.AI Responsible AI and Ethics Policy',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: ['/og-responsible-ai.png'],
+  },
+};
+
 export default function ResponsibleAIPage() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
@@ -84,7 +118,7 @@ export default function ResponsibleAIPage() {
               <li>We design our systems to be compliant with major privacy regulations, including GDPR and CCPA, providing users with control over their data.</li>
             </ul>
           </PolicySection>
-          
+
           <PolicySection icon={Users} title="Global Ethical Standards & AI Provider Selection">
             <p>At MyImaginaryFriends.AI, we do not build or train our own foundational AI models. Instead, we carefully select third-party AI providers (such as OpenAI, Google Gemini, Hume.ai, or others) that demonstrate a strong commitment to privacy, safety, and responsible AI development. Our selection criteria include:</p>
             <ul className="list-disc list-inside mt-3 mb-3 space-y-1 text-muted-foreground">
@@ -99,7 +133,7 @@ export default function ResponsibleAIPage() {
 
           <PolicySection icon={ExternalLink} title="AI Provider Disclosure & Data Usage">
             <p>We may use various third-party AI engines based on application needs and to enhance user experience. Each provider has publicly stated data use and retention policies, which we respect. These choices are made strategically to increase accessibility and responsible adoption of AI technologies. Policies are current as of May 2025. For the most up-to-date information, please consult the official documents linked below.</p>
-            
+
             <div className="mt-6 overflow-x-auto">
               <Table>
                 <TableHeader>

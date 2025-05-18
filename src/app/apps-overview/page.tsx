@@ -1,4 +1,5 @@
 
+import type { Metadata } from 'next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -13,7 +14,7 @@ const apps = [
     description: "Bubbas.AI is an emotionally supportive AI journaling and reflection companion. It helps you explore your thoughts and feelings in a safe, private space, offering prompts and insights for personal growth.",
     icon: MessageCircle,
     imageUrl: "https://placehold.co/600x400.png",
-    imageAlt: "Bubbas.AI interface for journaling",
+    imageAlt: "Bubbas.AI emotional support AI journal app interface",
     imageHint: "journal app AI",
     features: [
       "Supportive journaling prompts",
@@ -27,11 +28,11 @@ const apps = [
   {
     id: "bubba-sticker-ai",
     name: "BubbaSticker.AI",
-    tagline: "Unleash Your Inner Artist",
+    tagline: "Unleash Your Inner Artist with AI Stickers",
     description: "BubbaSticker.AI is a fun, expressive image generator for creating unique stickers and visual content. Turn your ideas into playful visuals for chats, social media, and creative projects.",
     icon: Sticker,
     imageUrl: "https://placehold.co/600x400.png",
-    imageAlt: "BubbaSticker.AI sticker examples",
+    imageAlt: "BubbaSticker.AI creative AI sticker generator examples",
     imageHint: "creative stickers AI",
     features: [
       "AI-powered text-to-sticker generation",
@@ -43,6 +44,39 @@ const apps = [
     status: "Coming Soon",
   },
 ];
+
+const pageTitle = "Our AI Apps | Bubbas.AI & BubbaSticker.AI";
+const pageDescription = "Discover our creative AI apps: Bubbas.AI, your AI journal for emotional support, and BubbaSticker.AI, for generating unique stickers. Built by MyImaginaryFriends.AI.";
+const pageKeywords = "AI apps, Bubbas.AI, BubbaSticker.AI, AI journal, AI sticker generator, emotional support app, creative AI, MyImaginaryFriends.AI apps";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: pageKeywords.split(', '),
+  alternates: {
+    canonical: '/apps-overview',
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: '/apps-overview',
+    type: 'website',
+    images: [
+      {
+        url: '/og-apps-overview.png', // Specific OG image for this page
+        width: 1200,
+        height: 630,
+        alt: 'Overview of MyImaginaryFriends.AI Apps',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: ['/og-apps-overview.png'],
+  },
+};
 
 export default function AppsOverviewPage() {
   return (

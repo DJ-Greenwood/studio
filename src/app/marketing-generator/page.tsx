@@ -1,5 +1,39 @@
 
+import type { Metadata } from 'next';
 import { MarketingGeneratorForm } from "@/components/marketing/MarketingGeneratorForm";
+
+const pageTitle = "AI Marketing Copy Generator";
+const pageDescription = "Craft compelling marketing campaigns effortlessly with MyImaginaryFriends.AI's AI-Powered Marketing Generator. Get unique copy, social media strategies, and more.";
+const pageKeywords = "AI marketing, marketing copy generator, AI content creation, social media strategy AI, campaign generator, MyImaginaryFriends.AI tools";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: pageKeywords.split(', '),
+  alternates: {
+    canonical: '/marketing-generator',
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: '/marketing-generator',
+    type: 'website', // Could be 'tool' if a more specific type exists
+    images: [
+      {
+        url: '/og-marketing-generator.png', // Specific OG image for this page
+        width: 1200,
+        height: 630,
+        alt: 'AI Marketing Copy Generator by MyImaginaryFriends.AI',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: ['/og-marketing-generator.png'],
+  },
+};
 
 export default function MarketingGeneratorPage() {
   return (
@@ -13,7 +47,7 @@ export default function MarketingGeneratorPage() {
             Craft compelling marketing campaigns effortlessly with the help of AI.
           </p>
         </header>
-        
+
         <MarketingGeneratorForm />
       </div>
     </div>
