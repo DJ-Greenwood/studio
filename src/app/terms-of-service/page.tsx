@@ -75,10 +75,10 @@ export default function TermsOfServicePage() {
             <p>Our approach to AI is grounded in ethical transparency and user trust:</p>
             <ul className="list-disc list-inside mt-3 space-y-2 text-muted-foreground">
               <li>🤝 <strong>User-first by design</strong> — Our decisions are guided by emotional safety and user dignity.</li>
-              <li>🔐 <strong>Privacy through encryption</strong> — We encrypt reflections and data before storing.</li>
-              <li>🧠 <strong>Data minimalism</strong> — We only collect what's necessary.</li>
-              <li>🚫 <strong>No manipulation</strong> — No dark patterns. No deceptive AI behavior.</li>
-              <li>📢 <strong>Transparency</strong> — We disclose all major changes in data handling.</li>
+              <li>🔐 **Privacy through encryption** — We encrypt reflections and data before storing.</li>
+              <li>🧠 **Data minimalism** — We only collect what's necessary.</li>
+              <li>🚫 **No manipulation** — No dark patterns. No deceptive AI behavior.</li>
+              <li>📢 **Transparency** — We disclose all major changes in data handling.</li>
             </ul>
           </Section>
 
@@ -108,9 +108,15 @@ export default function TermsOfServicePage() {
             </p>
           </Section>
 
-          <Section title="9. Updates to These Terms">
+          <Section title="9. Legal Scope and Policy Updates">
             <p>
-              These terms, along with our privacy and ethics policies, may be updated periodically. If we make significant changes, we’ll notify users through the app or email.
+              This document serves as the Terms of Service, Privacy Policy, and Ethics Policy for MyImaginaryFriends.AI and all related applications, including Bubbas.AI and BubbaSticker.AI.
+            </p>
+            <p>
+              We believe in keeping things simple, unified, and transparent. By consolidating our terms, we make it easier for users to understand their rights and our responsibilities.
+            </p>
+            <p>
+              These terms may be updated periodically to reflect new features, legal requirements, or service improvements. If we make significant changes, we’ll notify users through the app or email.
             </p>
           </Section>
 
