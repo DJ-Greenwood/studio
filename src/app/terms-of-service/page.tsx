@@ -249,7 +249,7 @@ export default function TermsOfServicePage() {
           </Section>
 
           <Section title="18. Image Generation Usage Guidelines">
-            <p>Both BubbaSticker.AI and Bubbas.AI use image generation tools powered by third-party AI providers like Google (Imagen, Gemini) and OpenAI (DALL·E). When you use these features, you must follow their rules in addition to ours.</p>
+            <p>BubbaSticker.AI uses image generation tools powered by third-party AI providers like Google (Imagen, Gemini) and OpenAI (DALL·E). When you use image generation features within BubbaSticker.AI, you must follow their rules in addition to ours.</p>
             <h3 className="font-semibold text-foreground text-lg mt-4 mb-2">What You CAN Do:</h3>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                 <li>Use generated images for personal and commercial purposes, as long as you follow all relevant laws and our partners’ policies.</li>
@@ -314,3 +314,4 @@ function Section({ title, children, id }: SectionProps) {
     </section>
   );
 }
+
