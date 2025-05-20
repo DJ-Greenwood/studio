@@ -52,6 +52,9 @@ export default function TermsOfServicePage() {
           <p className="text-md text-muted-foreground">
             Last Updated: May 20, 2025
           </p>
+          <p className="text-md text-muted-foreground">
+            Version: 1.1.0
+          </p>
           <p className="mt-4 text-muted-foreground">
             This document explains how MyImaginaryFriends.AI works, what you can expect from us, and how we handle your information. It applies to all our apps, including Bubbas.AI and BubbaStickers.AI.
           </p>
@@ -85,7 +88,7 @@ export default function TermsOfServicePage() {
               </CardHeader>
               <CardContent className="text-destructive/90 space-y-2">
                 <p>
-                  Our apps are <strong>not</strong> a replacement for professional therapy, medical advice, or legal help. If you need immediate assistance, please reach out to professional services. <Link href="#global-crisis-lines" className="underline hover:text-destructive/70">[See global crisis lines at the end of this document.]</Link>
+                  Our apps are <strong>not</strong> a replacement for professional therapy, medical advice, or legal help. If you need immediate assistance, please reach out to professional services. <Link href="#global-crisis-lines" className="underline hover:text-destructive/70 scroll-mt-20">[See global crisis lines at the end of this document.]</Link>
                 </p>
               </CardContent>
             </Card>
@@ -115,7 +118,7 @@ export default function TermsOfServicePage() {
             <ul className="list-disc list-inside mt-3 space-y-2 text-muted-foreground">
               <li>Access, download, or delete your data at any time.</li>
               <li>Cancel or change your subscription whenever you wish.</li>
-              <li>Contact us with any questions or complaints at: <a href="mailto:Founder@MyImaginaryFriends.ai" className="text-primary hover:underline">Founder@MyImaginaryFriends.ai</a>.</li>
+              <li>Contact us with any questions or complaints at: <a href="mailto:Founder@myimaginaryfriends.ai" className="text-primary hover:underline">Founder@myimaginaryfriends.ai</a>.</li>
             </ul>
           </Section>
 
@@ -164,6 +167,9 @@ export default function TermsOfServicePage() {
               <li>Pro Tier ($10/month): Up to 250 cloud images, faster processing, and watermark-free downloads.</li>
               <li>Ultra Tier ($20/month): Up to 500 cloud images, high-resolution exports, commercial usage rights, and early access to new features.</li>
             </ul>
+            <p className="mt-4 text-sm text-muted-foreground italic">
+              Disclaimer: All subscription prices and plan features listed above are illustrative and subject to review and change. Final pricing and plan details will be confirmed at the time of launch or official offering.
+            </p>
           </Section>
 
           <Section title="9. Intellectual Property: You Own Your Creations">
@@ -314,3 +320,6 @@ function Section({ title, children, id }: SectionProps) {
     </section>
   );
 }
+
+
+    
