@@ -85,7 +85,7 @@ export default function TermsOfServicePage() {
               </CardHeader>
               <CardContent className="text-destructive/90 space-y-2">
                 <p>
-                  Our apps are <strong>not</strong> a replacement for professional therapy, medical advice, or legal help. If you need immediate assistance, please reach out to professional services. [See global crisis lines at the end of this document.]
+                  Our apps are <strong>not</strong> a replacement for professional therapy, medical advice, or legal help. If you need immediate assistance, please reach out to professional services. <Link href="#global-crisis-lines" className="underline hover:text-destructive/70">[See global crisis lines at the end of this document.]</Link>
                 </p>
               </CardContent>
             </Card>
@@ -264,7 +264,7 @@ export default function TermsOfServicePage() {
             <p className="mt-3">We reserve the right to limit or remove your access to image generation tools if you misuse them, and to report any illegal or harmful content to the proper authorities.</p>
           </Section>
 
-          <Section title="19. Global Crisis Lines">
+          <Section title="19. Global Crisis Lines" id="global-crisis-lines">
             <ul className="space-y-2 text-muted-foreground">
                 <li><strong>United States:</strong> 988 Suicide & Crisis Lifeline — Call or text 988</li>
                 <li><strong>Canada:</strong> Talk Suicide Canada — Call 1-833-456-4566</li>
@@ -299,11 +299,12 @@ export default function TermsOfServicePage() {
 interface SectionProps {
   title: string;
   children: React.ReactNode;
+  id?: string;
 }
 
-function Section({ title, children }: SectionProps) {
+function Section({ title, children, id }: SectionProps) {
   return (
-    <section className="space-y-3">
+    <section className="space-y-3 scroll-mt-20" id={id}>
       <h2 className="text-2xl font-semibold text-foreground border-b pb-2 mb-4">
         {title}
       </h2>
