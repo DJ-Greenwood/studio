@@ -70,7 +70,7 @@ export default function PurposeClientPage() {
             <Users className="h-8 w-8 text-primary" aria-hidden="true" /> A World in Need of Reflection
           </h2>
           <p className="text-muted-foreground">
-            There are over <strong>8 billion people</strong> in the world (Source: <a href="https://www.macrotrends.net/global-metrics/population/world-population" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Macrotrends, 2025</a>).
+            There are over <strong>8 billion people</strong> in the world (Source: <a href="https://www.worldometers.info/world-population/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Worldometer, 2024</a>).
             Behind every number is a life with unspoken thoughts, unprocessed emotions, or untold stories.
             Many feel overwhelmed, isolated, or creatively stifled — and too often, they face it all alone.
           </p>
@@ -125,7 +125,7 @@ export default function PurposeClientPage() {
                         <TableCell>
                           {row.population}
                           {row.source && (
-                            <a href={row.source} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1 text-xs">(Source)</a>
+                            <a href={row.source} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1 text-xs" aria-hidden="true">(Source)</a>
                           )}
                         </TableCell>
                         <TableCell className="text-center">{row.estimatedSupport}</TableCell>
@@ -139,7 +139,7 @@ export default function PurposeClientPage() {
           </Card>
           <div className="mt-4 text-sm text-muted-foreground space-y-1">
             <p>
-              *Population numbers rounded from 2025 projections. Sources include Worldometer and Macrotrends.
+              *Population numbers rounded from 2025 projections. Sources include Worldometer.
             </p>
             <p>
               †&quot;Estimated to Need Support&quot; includes people experiencing emotional distress, loneliness, burnout, or sub-clinical wellness needs — not only those with diagnosed mental health conditions. Verified prevalence rates for diagnosed disorders are significantly lower (see: <a href="https://www.thelancet.com/gbd" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Global Burden of Disease Study, 2019</a>).
@@ -237,3 +237,4 @@ export default function PurposeClientPage() {
     </div>
   );
 }
+
