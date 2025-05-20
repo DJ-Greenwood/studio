@@ -222,15 +222,19 @@ export default function TermsOfServicePage() {
           <Section title="15. Legal Details">
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                 <li>These terms are governed by the laws of the State of Oklahoma, USA.</li>
-                <li>Any legal issues will be handled in Oklahoma County courts.</li>
+                <li>Any legal issues will be handled in the courts located in Love County, Oklahoma, which includes Marietta.</li>
                 <li>If any part of these terms is found invalid, the rest will still apply.</li>
             </ul>
           </Section>
 
-          <Section title="16. Legal Scope and Policy Updates">
-             <p>This document serves as the Terms of Service, Privacy Policy, and Ethics Policy for MyImaginaryFriends.AI and all related applications, including Bubbas.AI and BubbaSticker.AI.</p>
-             <p className="mt-2">We believe in keeping things simple, unified, and transparent. By consolidating our terms, we make it easier for users to understand their rights and our responsibilities.</p>
-            <p className="mt-2">We may update these terms occasionally to reflect new features, legal requirements, or service improvements. If we make significant changes, we’ll notify you through the app or by email.</p>
+          <Section title="16. Policy Updates">
+             <p>This document covers the Terms of Service, Privacy Policy, and Ethics Policy for:</p>
+             <ul className="list-disc list-inside mt-2 space-y-1 text-muted-foreground">
+                <li>MyImaginaryFriends.AI</li>
+                <li>Bubbas.AI</li>
+                <li>BubbaSticker.AI</li>
+             </ul>
+            <p className="mt-2">We may update these terms occasionally. If the changes are significant, we’ll notify you through the app or by email. By continuing to use our services, you accept the updated terms.</p>
           </Section>
 
           <Section title="17. Contact Us">
@@ -241,7 +245,7 @@ export default function TermsOfServicePage() {
                 Founder@MyImaginaryFriends.ai
               </a>
             </div>
-            <p className="mt-1 text-muted-foreground">📍 Oklahoma City, OK</p>
+            <p className="mt-1 text-muted-foreground">📍 Marietta, OK</p>
           </Section>
 
           <Section title="18. Image Generation Usage Guidelines">
@@ -310,5 +314,3 @@ function Section({ title, children, id }: SectionProps) {
     </section>
   );
 }
-
-    
