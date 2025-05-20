@@ -133,7 +133,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="text-center text-muted-foreground text-lg">
                 <p>
-                  We create human-centered AI that supports emotional well-being, inspires creativity, and fosters empathy across cultures.
+                  We create human-centered AI applications that supports emotional well-being, inspires creativity, and fosters empathy across cultures.
                 </p>
                 <p className="mt-2">
                   We believe everyone — regardless of background, age, or location — should have access to safe, expressive, and empowering technology. Our vision is to build tools that help people connect with themselves and others in more meaningful ways.
