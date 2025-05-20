@@ -12,8 +12,8 @@ const providerPolicies = [
     optInRequired: "Yes",
     dataRetention: "Up to 30 days",
     policyLinks: [
-      { name: "Enterprise Privacy", url: "https://openai.com/enterprise-privacy" },
-      { name: "Data Usage", url: "https://openai.com/policies/usage-policies" },
+      { name: "OpenAI Privacy", url: "https://openai.com/enterprise-privacy" },
+      { name: "Usage Policies", url: "https://openai.com/policies/usage-policies" },
     ],
   },
   {
@@ -22,7 +22,7 @@ const providerPolicies = [
     optInRequired: "Yes",
     dataRetention: "Not specified",
     policyLinks: [
-      { name: "Terms of Service", url: "https://policies.google.com/terms" },
+      { name: "Gemini Terms", url: "https://policies.google.com/terms" },
       { name: "Usage Policies", url: "https://ai.google.dev/terms" },
     ],
   },
@@ -32,7 +32,7 @@ const providerPolicies = [
     optInRequired: "Not applicable",
     dataRetention: "Until user deletion",
     policyLinks: [
-      { name: "Data Usage Policy", url: "https://dev.hume.ai/docs/privacy-and-data-usage" },
+      { name: "Hume Data Policy", url: "https://dev.hume.ai/docs/privacy-and-data-usage" },
       { name: "Developer Docs", url: "https://dev.hume.ai/docs" },
     ],
   },
@@ -60,10 +60,10 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: '/responsible-ai',
-    type: 'article', // This page is more article-like
+    type: 'article',
     images: [
       {
-        url: '/og-responsible-ai.png', // Specific OG image for this page
+        url: '/og-responsible-ai.png',
         width: 1200,
         height: 630,
         alt: 'MyImaginaryFriends.AI Responsible AI and Ethics Policy',
@@ -88,7 +88,7 @@ export default function ResponsibleAIPage() {
             Our Commitment to Responsible AI
           </h1>
           <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
-            At MyImaginaryFriends.AI, we create digital tools that empower users to reflect deeply, express creatively, and grow intentionally — all while respecting privacy and ethical standards.
+            At MyImaginaryFriends.AI, we build digital tools that empower you to reflect, create, and grow—while upholding the highest standards of privacy and ethics.
           </p>
         </header>
 
@@ -100,38 +100,38 @@ export default function ResponsibleAIPage() {
             </div>
           </CardHeader>
           <CardContent className="text-destructive/90 space-y-3">
-            <p>MyImaginaryFriends.AI and its applications (Bubbas.AI, BubbaStickers.AI) are not licensed therapy, mental health, or counseling services. Our AI companions are intended for general emotional support, journaling, and creative expression.</p>
-            <p>If you or someone you know is experiencing a mental health crisis, please seek professional support. In the United States, you can contact the 988 Suicide & Crisis Lifeline by calling or texting 988, or visiting <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-destructive/70">988lifeline.org</a>.</p>
+            <p>MyImaginaryFriends.AI and its applications (Bubbas.AI, BubbaStickers.AI) are not licensed therapy, mental health, or counseling services. Our AI companions are for general emotional support, journaling, and creative expression only.</p>
+            <p>If you or someone you know is experiencing a mental health crisis, please seek professional help. In the U.S., contact the 988 Suicide & Crisis Lifeline by calling or texting 988, or visiting <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-destructive/70">988lifeline.org</a>.</p>
           </CardContent>
         </Card>
 
         <section className="space-y-10">
           <PolicySection icon={Brain} title="AI Use Transparency">
-            <p>All AI interactions within MyImaginaryFriends.AI applications are clearly labeled and disclosed. Users are always informed when they are interacting with an AI system. We believe in empowering users with knowledge about the technology they use.</p>
+            <p>All AI interactions are clearly labeled and disclosed within our apps. Whenever you interact with an AI system, you’ll see a clear indicator (such as an icon or label) so you always know when you’re engaging with AI.</p>
+            <p className="mt-2">We believe in empowering users with knowledge about the technology they use.</p>
           </PolicySection>
 
           <PolicySection icon={Lock} title="Data Privacy">
-            <p>Protecting your privacy is fundamental to our mission. We adhere to the following principles:</p>
-            <ul className="list-disc list-inside mt-3 space-y-1 text-muted-foreground">
-              <li>No personal data is ever sold or shared with third parties for their marketing purposes.</li>
-              <li>Client-side encryption is prioritized for sensitive content like chat logs, journal entries, and image data to ensure only you can access it.</li>
-              <li>We design our systems to be compliant with major privacy regulations, including GDPR and CCPA, providing users with control over their data.</li>
+            <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>No personal data is ever sold or shared for marketing.</li>
+              <li>Client-side encryption protects your sensitive content—only you can access it.</li>
+              <li>We comply with major privacy regulations (GDPR, CCPA), giving you control over your data.</li>
             </ul>
           </PolicySection>
 
           <PolicySection icon={Users} title="Global Ethical Standards & AI Provider Selection">
-            <p>At MyImaginaryFriends.AI, we do not build or train our own foundational AI models. Instead, we carefully select third-party AI providers (such as OpenAI, Google Gemini, Hume.ai, or others) that demonstrate a strong commitment to privacy, safety, and responsible AI development. Our selection criteria include:</p>
+            <p>At MyImaginaryFriends.AI, we do not build or train our own foundational AI models. We use trusted third-party AI providers (such as OpenAI, Google Gemini, Hume.ai, or others) who meet our strict privacy and ethical criteria. Our selection criteria include providers that:</p>
             <ul className="list-disc list-inside mt-3 mb-3 space-y-1 text-muted-foreground">
-                <li>Commitment to not using customer data for training their models by default.</li>
-                <li>Robust data security and privacy-preserving practices.</li>
-                <li>Alignment with global ethical standards for AI.</li>
-                <li>Transparency in their AI development and data handling policies.</li>
+                <li>Do not use customer data for training their models by default.</li>
+                <li>Employ robust data security and privacy-preserving practices.</li>
+                <li>Are transparent about their AI and data policies.</li>
+                <li>Align with global ethical standards for AI.</li>
             </ul>
-            <p>We provide a secure environment for users to engage with these AI tools. What users write, generate, or explore is encrypted on their device — we cannot read or access it.</p>
+            <p>We provide a secure environment for users to engage with these AI tools. What users write, generate, or explore is encrypted on their device — we cannot read or access it. Data sent to AI providers is only for processing the user’s request and is not stored by us in its unencrypted form.</p>
             <p className="mt-3">We are committed to creating a safe space where people can use AI for self-growth, emotional exploration, creative expression, and personal insight. While we don't directly control how foundational AI models are built, we align ourselves with providers that meet our ethical and privacy expectations and advocate for better standards industry-wide.</p>
           </PolicySection>
 
-          <PolicySection icon={ExternalLink} title="AI Provider Disclosure & Data Usage">
+          <PolicySection icon={ExternalLink} title="AI Provider Disclosure">
             <p>We may use various third-party AI engines based on application needs and to enhance user experience. Each provider has publicly stated data use and retention policies, which we respect. These choices are made strategically to increase accessibility and responsible adoption of AI technologies. Policies are current as of May 2025. For the most up-to-date information, please consult the official documents linked below.</p>
 
             <div className="mt-6 overflow-x-auto">
@@ -139,7 +139,7 @@ export default function ResponsibleAIPage() {
                 <TableHeader>
                   <TableRow>
                     <TableHead>Provider</TableHead>
-                    <TableHead>Default Data Usage for Training</TableHead>
+                    <TableHead>Default Data Usage for Training?</TableHead>
                     <TableHead>Opt-In Required?</TableHead>
                     <TableHead>Data Retention</TableHead>
                     <TableHead>Policy Links</TableHead>
@@ -169,7 +169,7 @@ export default function ResponsibleAIPage() {
               </Table>
             </div>
              <p className="mt-4 text-sm text-muted-foreground">
-              Note: The links provided are for informational purposes. MyImaginaryFriends.AI is not responsible for the content of external sites.
+              Note: See each provider’s website for the latest details. MyImaginaryFriends.AI is not responsible for external content.
             </p>
           </PolicySection>
 
@@ -189,7 +189,13 @@ export default function ResponsibleAIPage() {
         <section className="mt-16 pt-8 border-t text-center">
           <h2 className="text-2xl font-semibold text-foreground mb-3">Contact Us</h2>
           <p className="text-muted-foreground">
-            If you have any questions or concerns about our AI ethics and practices, please don't hesitate to reach out. We value open dialogue and feedback. You can contact us at <a href="mailto:Founder@myimaginaryfriends.ai" className="text-primary hover:underline">Founder@myimaginaryfriends.ai</a>.
+            If you have any questions or concerns about our AI ethics and practices, please don't hesitate to reach out. We value open dialogue and feedback.
+          </p>
+          <p className="text-muted-foreground mt-1">
+            Email: <a href="mailto:Founder@myimaginaryfriends.ai" className="text-primary hover:underline">Founder@myimaginaryfriends.ai</a>
+          </p>
+          <p className="text-muted-foreground mt-1">
+            Registered office: Marietta, OK
           </p>
         </section>
       </div>
@@ -222,3 +228,6 @@ function PolicySection({ icon: Icon, title, children }: PolicySectionProps) {
     </Card>
   );
 }
+
+
+    
