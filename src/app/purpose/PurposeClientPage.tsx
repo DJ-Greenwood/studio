@@ -149,7 +149,7 @@ export default function PurposeClientPage() {
             We don’t believe in pressure. But we do believe in ripples.
           </p>
           <blockquote className="border-l-4 border-primary pl-4 py-2 my-4 bg-primary/5">
-            <p className="text-lg italic text-primary-foreground/80">
+            <p className="text-lg italic text-primary">
               If <strong>you</strong> share this with one person who needs it — and they share it with one more — the ripple grows.
             </p>
           </blockquote>
@@ -171,7 +171,7 @@ export default function PurposeClientPage() {
             We’re inviting you to <strong>share something gentle</strong> — something that might help someone feel seen, supported, or inspired.
           </p>
           <Card className="bg-accent/20 border-accent/50 p-6 inline-block">
-             <blockquote className="text-xl font-semibold text-accent-foreground/90">
+             <blockquote className="text-xl font-semibold text-accent">
                 🧠 Share MyImaginaryFriends.AI with a friend who might need space to think, feel, or create.
             </blockquote>
           </Card>
@@ -226,3 +226,4 @@ export default function PurposeClientPage() {
     </div>
   );
 }
+
