@@ -41,8 +41,8 @@ const coreValues = [
 ];
 
 const pageTitle = "MyImaginaryFriends.AI | Ethical AI for Reflection & Creativity";
-const pageDescription = "Discover MyImaginaryFriends.AI. We build AI tools like Bubbas.AI (emotional journal) and BubbaSticker.AI (sticker generator) to empower reflection, creativity, and growth, prioritizing privacy and ethics.";
-const pageKeywords = "MyImaginaryFriends.AI, ethical AI, creative AI, Bubbas.AI, BubbaSticker.AI, AI journaling, AI sticker generator, emotional intelligence AI, responsible technology";
+const pageDescription = "Discover MyImaginaryFriends.AI. We build AI tools like Bubbas.AI (emotional journal) and BubbaStickers.AI (sticker generator) to empower reflection, creativity, and growth, prioritizing privacy and ethics.";
+const pageKeywords = "MyImaginaryFriends.AI, ethical AI, creative AI, Bubbas.AI, BubbaStickers.AI, AI journaling, AI sticker generator, emotional intelligence AI, responsible technology";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -219,7 +219,7 @@ export default function HomePage() {
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl md:text-2xl mb-8">
             We're building a future where technology helps people feel more human — not less.
-            Join us as we build tools that help people: Reflect with Bubbas.AI, Express with BubbaSticker.AI, And imagine, with intention.
+            Join us as we build tools that help people: Reflect with Bubbas.AI, Express with BubbaStickers.AI, And imagine, with intention.
           </p>
         </div>
       </section>

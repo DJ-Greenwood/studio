@@ -5,8 +5,8 @@ import { AlertTriangle, Mail, CheckCircle, FileText } from "lucide-react";
 import Link from "next/link";
 
 const pageTitle = "MyImaginaryFriends.AI: Terms, Privacy, and Ethics Policy";
-const pageDescription = "Review the comprehensive Terms of Service, Privacy Policy, and Ethics Policy for MyImaginaryFriends.AI and its applications, including Bubbas.AI and BubbaSticker.AI. Understand your rights, our data handling practices, and ethical commitments.";
-const pageKeywords = "terms of service, privacy policy, ethics policy, MyImaginaryFriends.AI terms, Bubbas.AI terms, BubbaSticker.AI terms, user agreement, data rights, encryption policy, AI ethics";
+const pageDescription = "Review the comprehensive Terms of Service, Privacy Policy, and Ethics Policy for MyImaginaryFriends.AI and its applications, including Bubbas.AI and BubbaStickers.AI. Understand your rights, our data handling practices, and ethical commitments.";
+const pageKeywords = "terms of service, privacy policy, ethics policy, MyImaginaryFriends.AI terms, Bubbas.AI terms, BubbaStickers.AI terms, user agreement, data rights, encryption policy, AI ethics";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -53,7 +53,7 @@ export default function TermsOfServicePage() {
             Last Updated: May 20, 2025
           </p>
           <p className="mt-4 text-muted-foreground">
-            This document explains how MyImaginaryFriends.AI works, what you can expect from us, and how we handle your information. It applies to all our apps, including Bubbas.AI and BubbaSticker.AI.
+            This document explains how MyImaginaryFriends.AI works, what you can expect from us, and how we handle your information. It applies to all our apps, including Bubbas.AI and BubbaStickers.AI.
           </p>
         </header>
 
@@ -64,7 +64,7 @@ export default function TermsOfServicePage() {
             </p>
             <ul className="list-disc list-inside mt-2 space-y-1 text-muted-foreground">
               <li>Bubbas.AI: Your personal AI journaling and emotional support friend.</li>
-              <li>BubbaSticker.AI: A creative tool to generate unique images and stickers.</li>
+              <li>BubbaStickers.AI: A creative tool to generate unique images and stickers.</li>
             </ul>
             <p className="mt-2">
               By using our services, you confirm you are old enough to agree to these terms, either for yourself or on behalf of an organization. You also agree to the terms of any services we use from other companies, such as Google’s Terms and OpenAI’s Terms.
@@ -74,7 +74,7 @@ export default function TermsOfServicePage() {
           <Section title="2. What Our Apps Do (and Don’t Do)">
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
               <li>Bubbas.AI helps you reflect, journal, and use tools for emotional support.</li>
-              <li>BubbaSticker.AI helps you create unique images and stickers for personal use or marketing.</li>
+              <li>BubbaStickers.AI helps you create unique images and stickers for personal use or marketing.</li>
             </ul>
             <Card className="mt-6 border-destructive bg-destructive/10">
               <CardHeader>
@@ -157,7 +157,7 @@ export default function TermsOfServicePage() {
               <li>Plus Tier ($10/month): Longer chat sessions, encrypted cloud journaling, and text-to-speech responses.</li>
               <li>Pro Tier ($20/month): Full AI memory, enhanced emotional intelligence, voice interaction, and deeper sentiment analysis.</li>
             </ul>
-            <h3 className="font-semibold text-foreground text-lg mb-2">BubbaSticker.AI Plans</h3>
+            <h3 className="font-semibold text-foreground text-lg mb-2">BubbaStickers.AI Plans</h3>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
               <li>Free Tier: Generate 5 images saved locally.</li>
               <li>Plus Tier ($5/month): 50 cloud-stored images per month and faster image generation.</li>
@@ -232,7 +232,7 @@ export default function TermsOfServicePage() {
              <ul className="list-disc list-inside mt-2 space-y-1 text-muted-foreground">
                 <li>MyImaginaryFriends.AI</li>
                 <li>Bubbas.AI</li>
-                <li>BubbaSticker.AI</li>
+                <li>BubbaStickers.AI</li>
              </ul>
             <p className="mt-2">We may update these terms occasionally. If the changes are significant, we’ll notify you through the app or by email. By continuing to use our services, you accept the updated terms.</p>
           </Section>
@@ -249,7 +249,7 @@ export default function TermsOfServicePage() {
           </Section>
 
           <Section title="18. Image Generation Usage Guidelines">
-            <p>BubbaSticker.AI uses image generation tools powered by third-party AI providers like Google (Imagen, Gemini) and OpenAI (DALL·E). When you use image generation features within BubbaSticker.AI, you must follow their rules in addition to ours.</p>
+            <p>BubbaStickers.AI uses image generation tools powered by third-party AI providers like Google (Imagen, Gemini) and OpenAI (DALL·E). When you use image generation features within BubbaStickers.AI, you must follow their rules in addition to ours.</p>
             <h3 className="font-semibold text-foreground text-lg mt-4 mb-2">What You CAN Do:</h3>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                 <li>Use generated images for personal and commercial purposes, as long as you follow all relevant laws and our partners’ policies.</li>
@@ -314,4 +314,3 @@ function Section({ title, children, id }: SectionProps) {
     </section>
   );
 }
-

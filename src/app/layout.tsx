@@ -13,8 +13,8 @@ const fontSans = FontSans({
 })
 
 const siteName = "MyImaginaryFriends.AI";
-const siteDescription = "MyImaginaryFriends.AI: Home of Bubbas.AI (emotional support journal) & BubbaSticker.AI (creative sticker generator). Explore ethical AI for reflection, creativity & growth.";
-const siteKeywords = "AI companion, emotional support AI, creative AI tools, journaling app, sticker generator, ethical AI, responsible AI, MyImaginaryFriends.AI, Bubbas.AI, BubbaSticker.AI";
+const siteDescription = "MyImaginaryFriends.AI: Home of Bubbas.AI (emotional support journal) & BubbaStickers.AI (creative sticker generator). Explore ethical AI for reflection, creativity & growth.";
+const siteKeywords = "AI companion, emotional support AI, creative AI tools, journaling app, sticker generator, ethical AI, responsible AI, MyImaginaryFriends.AI, Bubbas.AI, BubbaStickers.AI";
 const baseUrl = new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://myimaginaryfriends.ai');
 
 export const metadata: Metadata = {

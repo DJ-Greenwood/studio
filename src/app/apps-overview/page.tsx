@@ -26,13 +26,13 @@ const apps = [
     status: "In Development",
   },
   {
-    id: "bubba-sticker-ai",
-    name: "BubbaSticker.AI",
+    id: "bubba-stickers-ai",
+    name: "BubbaStickers.AI",
     tagline: "Unleash Your Inner Artist with AI Stickers",
-    description: "BubbaSticker.AI is a fun, expressive image generator for creating unique stickers and visual content. Turn your ideas into playful visuals for chats, social media, and creative projects.",
+    description: "BubbaStickers.AI is a fun, expressive image generator for creating unique stickers and visual content. Turn your ideas into playful visuals for chats, social media, and creative projects.",
     icon: Sticker,
     imageUrl: "https://placehold.co/600x400.png",
-    imageAlt: "BubbaSticker.AI creative AI sticker generator examples",
+    imageAlt: "BubbaStickers.AI creative AI sticker generator examples",
     imageHint: "creative stickers AI",
     features: [
       "AI-powered text-to-sticker generation",
@@ -45,9 +45,9 @@ const apps = [
   },
 ];
 
-const pageTitle = "Our AI Apps | Bubbas.AI & BubbaSticker.AI";
-const pageDescription = "Discover our creative AI apps: Bubbas.AI, your AI journal for emotional support, and BubbaSticker.AI, for generating unique stickers. Built by MyImaginaryFriends.AI.";
-const pageKeywords = "AI apps, Bubbas.AI, BubbaSticker.AI, AI journal, AI sticker generator, emotional support app, creative AI, MyImaginaryFriends.AI apps";
+const pageTitle = "Our AI Apps | Bubbas.AI & BubbaStickers.AI";
+const pageDescription = "Discover our creative AI apps: Bubbas.AI, your AI journal for emotional support, and BubbaStickers.AI, for generating unique stickers. Built by MyImaginaryFriends.AI.";
+const pageKeywords = "AI apps, Bubbas.AI, BubbaStickers.AI, AI journal, AI sticker generator, emotional support app, creative AI, MyImaginaryFriends.AI apps";
 
 export const metadata: Metadata = {
   title: pageTitle,

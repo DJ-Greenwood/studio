@@ -14,7 +14,7 @@ export function Footer() {
           </Link>
         </div>
         <p className="mb-1">
-          Bubbas.AI and BubbaSticker.AI are products of MyImaginaryFriends.AI LLC, a registered company dedicated to building emotionally supportive and creative AI tools.
+          Bubbas.AI and BubbaStickers.AI are products of MyImaginaryFriends.AI LLC, a registered company dedicated to building emotionally supportive and creative AI tools.
         </p>
         <p className="mb-2">&copy; 2025 MyImaginaryFriends.AI LLC. All rights reserved.</p>
         <p className="text-xs mb-2">Powered by GenAI and Next.js</p>

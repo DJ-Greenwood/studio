@@ -46,7 +46,7 @@ const brandCommitments = [
 ];
 
 const pageTitle = "Responsible AI & Ethics Policy";
-const pageDescription = "Learn about MyImaginaryFriends.AI's commitment to responsible AI, data privacy, ethical standards, and transparency in our AI applications like Bubbas.AI and BubbaSticker.AI.";
+const pageDescription = "Learn about MyImaginaryFriends.AI's commitment to responsible AI, data privacy, ethical standards, and transparency in our AI applications like Bubbas.AI and BubbaStickers.AI.";
 const pageKeywords = "responsible AI, ethical AI, data privacy, AI transparency, AI safety, MyImaginaryFriends.AI ethics, AI policy";
 
 export const metadata: Metadata = {
@@ -100,7 +100,7 @@ export default function ResponsibleAIPage() {
             </div>
           </CardHeader>
           <CardContent className="text-destructive/90 space-y-3">
-            <p>MyImaginaryFriends.AI and its applications (Bubbas.AI, BubbaSticker.AI) are not licensed therapy, mental health, or counseling services. Our AI companions are intended for general emotional support, journaling, and creative expression.</p>
+            <p>MyImaginaryFriends.AI and its applications (Bubbas.AI, BubbaStickers.AI) are not licensed therapy, mental health, or counseling services. Our AI companions are intended for general emotional support, journaling, and creative expression.</p>
             <p>If you or someone you know is experiencing a mental health crisis, please seek professional support. In the United States, you can contact the 988 Suicide & Crisis Lifeline by calling or texting 988, or visiting <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-destructive/70">988lifeline.org</a>.</p>
           </CardContent>
         </Card>
