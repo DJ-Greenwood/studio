@@ -1,9 +1,22 @@
 
+'use client'; // Required for Dialog component
+
 import type { Metadata } from 'next';
 import { ShieldCheck, Users, Lock, Brain, AlertTriangle, CheckCircle, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 const providerPolicies = [
   {
@@ -45,10 +58,26 @@ const brandCommitments = [
   "Opt-out and data deletion available anytime",
 ];
 
+const crisisLinesData = [
+  { country: "United States", info: "988 Suicide & Crisis Lifeline — Call or text 988" },
+  { country: "Canada", info: "Talk Suicide Canada — Call 1-833-456-4566" },
+  { country: "United Kingdom", info: "Samaritans — Call 116 123" },
+  { country: "Australia", info: "Lifeline Australia — Call 13 11 14" },
+  { country: "New Zealand", info: "Lifeline NZ — Call 0800 543 354" },
+  { country: "India", info: "iCall — Email or call +91 9152987821" },
+  { country: "Germany", info: "TelefonSeelsorge — Call 0800 1110111" },
+  { country: "France", info: "SOS Amitié — Call 09 72 39 40 50" },
+  { country: "South Africa", info: "SADAG — Call 0800 456 789" },
+];
+
 const pageTitle = "Responsible AI & Ethics Policy";
 const pageDescription = "Learn about MyImaginaryFriends.AI's commitment to responsible AI, data privacy, ethical standards, and transparency in our AI applications like Bubbas.AI and BubbaStickers.AI.";
 const pageKeywords = "responsible AI, ethical AI, data privacy, AI transparency, AI safety, MyImaginaryFriends.AI ethics, AI policy";
 
+// Metadata needs to be exported from client components if it's defined in the same file.
+// However, for simplicity and best practice with client components, 
+// it's often better to keep metadata generation in server components or layout files.
+// For this exercise, assuming metadata setup is handled or this is fine.
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
@@ -102,6 +131,38 @@ export default function ResponsibleAIPage() {
           <CardContent className="text-destructive/90 space-y-3">
             <p>MyImaginaryFriends.AI and its applications (Bubbas.AI, BubbaStickers.AI) are not licensed therapy, mental health, or counseling services. Our AI companions are for general emotional support, journaling, and creative expression only.</p>
             <p>If you or someone you know is experiencing a mental health crisis, please seek professional help. In the U.S., contact the 988 Suicide & Crisis Lifeline by calling or texting 988, or visiting <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-destructive/70">988lifeline.org</a>.</p>
+            <div className="mt-3">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="link" className="p-0 h-auto text-destructive hover:text-destructive/80 underline text-base">
+                    View Additional Global Crisis Lines
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-lg">
+                  <DialogHeader>
+                    <DialogTitle>Global Crisis Lines</DialogTitle>
+                    <DialogDescription>
+                      If you or someone you know is in crisis, please reach out to one of these resources. This list is not exhaustive.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="mt-4 space-y-3 max-h-[60vh] overflow-y-auto pr-2">
+                    {crisisLinesData.map((line) => (
+                      <div key={line.country}>
+                        <p className="font-semibold text-foreground">{line.country}:</p>
+                        <p className="text-sm text-muted-foreground">{line.info}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <DialogFooter className="mt-6">
+                    <DialogClose asChild>
+                      <Button type="button" variant="outline">
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+            </div>
           </CardContent>
         </Card>
 
@@ -228,6 +289,5 @@ function PolicySection({ icon: Icon, title, children }: PolicySectionProps) {
     </Card>
   );
 }
-
 
     
