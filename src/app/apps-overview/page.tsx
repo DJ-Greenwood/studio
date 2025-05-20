@@ -94,14 +94,17 @@ export default function AppsOverviewPage() {
         {apps.map((app) => (
           <Card key={app.id} id={app.id} className="overflow-hidden shadow-xl transform transition-all hover:scale-[1.01] duration-300">
             <div className="grid md:grid-cols-2">
-              <div className="relative h-64 md:h-auto">
-                <Image
-                  src={app.imageUrl}
-                  alt={app.imageAlt}
-                  fill={true}
-                  style={{objectFit: 'cover'}}
-                  data-ai-hint={app.imageHint}
-                />
+              <div className="relative h-64 md:h-auto flex items-center justify-center">
+                <div className="relative w-3/4 h-3/4">
+                  <Image
+                    src={app.imageUrl}
+                    alt={app.imageAlt}
+                    fill={true}
+                    style={{objectFit: 'cover'}}
+                    data-ai-hint={app.imageHint}
+                    className="rounded-md" 
+                  />
+                </div>
               </div>
               <div className="flex flex-col p-6 md:p-8">
                 <CardHeader className="p-0 mb-4">
