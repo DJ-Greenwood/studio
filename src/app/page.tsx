@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-homepage.png', // Specific OG image for homepage if desired, otherwise falls back to layout.tsx
+        url: '/og-homepage.png', 
         width: 1200,
         height: 630,
         alt: 'MyImaginaryFriends.AI - Nurturing Creativity and Reflection with AI',
@@ -77,8 +77,9 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "MyImaginaryFriends.AI",
-  "url": "https://myimaginaryfriends.ai", // Replace with actual domain if different
-  "logo": "https://myimaginaryfriends.ai/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png", // Replace with actual logo URL
+  "url": "https://myimaginaryfriends.ai", 
+  "logo": "https://myimaginaryfriends.ai/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png", 
+  "image": "https://myimaginaryfriends.ai/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png",
   "description": "MyImaginaryFriends.AI is the parent company of emotionally intelligent and creativity-boosting AI applications. We create digital tools that empower users to reflect deeply, express creatively, and grow intentionally — all while respecting privacy and ethical standards.",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -114,11 +115,6 @@ export default function HomePage() {
             <Button asChild size="lg" className="shadow-lg hover:shadow-primary/50 transition-shadow">
               <Link href="/apps-overview">Discover Our Apps</Link>
             </Button>
-            {/* Removed Try Marketing AI button
-            <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-accent/50 transition-shadow">
-              <Link href="/marketing-generator">Try Marketing AI</Link>
-            </Button>
-            */}
           </div>
         </div>
       </section>
@@ -226,3 +222,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    

@@ -37,9 +37,41 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MyImaginaryFriends.AI: Terms, Privacy, and Ethics Policy",
+  "description": "Review the comprehensive Terms of Service, Privacy Policy, and Ethics Policy for MyImaginaryFriends.AI and its applications, including Bubbas.AI and BubbaStickers.AI.",
+  "image": "https://myimaginaryfriends.ai/og-terms.png",
+  "datePublished": "2025-04-10",
+  "dateModified": "2025-05-20",
+  "author": {
+    "@type": "Organization",
+    "name": "MyImaginaryFriends.AI",
+    "url": "https://myimaginaryfriends.ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyImaginaryFriends.AI",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://myimaginaryfriends.ai/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png"
+    },
+    "url": "https://myimaginaryfriends.ai"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://myimaginaryfriends.ai/terms-of-service"
+  }
+};
+
 export default function TermsOfServicePage() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div className="max-w-3xl mx-auto">
         <header className="mb-10 text-center">
           <FileText className="h-16 w-16 text-primary mx-auto mb-4" />
@@ -88,7 +120,7 @@ export default function TermsOfServicePage() {
               </CardHeader>
               <CardContent className="text-destructive/90 space-y-2">
                 <p>
-                  Our apps are <strong>not</strong> a replacement for professional therapy, medical advice, or legal help. If you need immediate assistance, please reach out to professional services. <Link href="#global-crisis-lines" className="underline hover:text-destructive/70 scroll-mt-20">[See global crisis lines at the end of this document.]</Link>
+                  Our apps are <strong>not</strong> a replacement for professional therapy, medical advice, or legal help. If you need immediate assistance, please reach out to professional services. <Link href="#global-crisis-lines" className="underline hover:text-destructive/70 scroll-mt-20">See global crisis lines at the end of this document.</Link>
                 </p>
               </CardContent>
             </Card>
@@ -320,6 +352,5 @@ function Section({ title, children, id }: SectionProps) {
     </section>
   );
 }
-
 
     
