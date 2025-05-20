@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, LayoutGrid, ShieldCheck, Menu, Sparkles } from "lucide-react"; 
+import { Home, LayoutGrid, ShieldCheck, Menu, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/apps-overview", label: "Apps", icon: LayoutGrid },
-  { href: "/purpose", label: "Purpose", icon: Sparkles }, 
+  { href: "/purpose", label: "Purpose", icon: Sparkles },
   { href: "/responsible-ai", label: "Responsible AI", icon: ShieldCheck },
 ];
 
@@ -48,7 +48,7 @@ export function Header() {
             alt="MyImaginaryFriends.AI Logo"
             width={32}
             height={32}
-            aria-hidden="true" 
+            aria-hidden="true"
           />
           <span className="text-xl font-bold tracking-tight text-foreground">
             MyImaginaryFriends.AI
