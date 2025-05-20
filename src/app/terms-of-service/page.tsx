@@ -124,7 +124,9 @@ export default function TermsOfServicePage() {
               <li>User-first: Our tools are built to support you, not manipulate.</li>
               <li>End-to-end encryption: Your personal reflections, chats, and voice transcripts are encrypted before storage.</li>
               <li>Minimal data collection: We only collect what’s necessary to provide our services.</li>
-              <li>No “dark patterns”: You remain in control of your data and experience.</li>
+              <li>
+                <strong>No "Dark Patterns":</strong> We do not use “dark patterns”—these are user interface designs or features that intentionally trick, pressure, or manipulate you into making choices you might not otherwise make, such as making it hard to cancel a subscription, hiding important information, or using confusing language to get you to share more data than you intend. We strive to make all choices clear, honest, and easy to understand.
+              </li>
               <li>Transparency: We’ll always keep you informed about major updates.</li>
             </ul>
           </Section>
@@ -225,14 +227,10 @@ export default function TermsOfServicePage() {
             </ul>
           </Section>
 
-          <Section title="16. Policy Updates">
-             <p>This document covers the Terms of Service, Privacy Policy, and Ethics Policy for:</p>
-            <ul className="list-disc list-inside mt-2 space-y-1 text-muted-foreground">
-                <li>MyImaginaryFriends.AI</li>
-                <li>Bubbas.AI</li>
-                <li>BubbaSticker.AI</li>
-            </ul>
-            <p className="mt-2">We may update these terms occasionally. If the changes are significant, we’ll notify you through the app or by email. By continuing to use our services, you accept the updated terms.</p>
+          <Section title="16. Legal Scope and Policy Updates">
+             <p>This document serves as the Terms of Service, Privacy Policy, and Ethics Policy for MyImaginaryFriends.AI and all related applications, including Bubbas.AI and BubbaSticker.AI.</p>
+             <p className="mt-2">We believe in keeping things simple, unified, and transparent. By consolidating our terms, we make it easier for users to understand their rights and our responsibilities.</p>
+            <p className="mt-2">We may update these terms occasionally to reflect new features, legal requirements, or service improvements. If we make significant changes, we’ll notify you through the app or by email.</p>
           </Section>
 
           <Section title="17. Contact Us">
