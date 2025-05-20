@@ -100,7 +100,7 @@ export default function AppsOverviewPage() {
                     src={app.imageUrl}
                     alt={app.imageAlt}
                     fill={true}
-                    style={{objectFit: 'cover'}}
+                    style={{objectFit: 'contain'}}
                     data-ai-hint={app.imageHint}
                     className="rounded-md" 
                   />
