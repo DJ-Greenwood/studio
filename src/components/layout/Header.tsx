@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, LayoutGrid, ShieldCheck, Dog, Menu, Sparkles } from "lucide-react"; 
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -41,7 +41,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <img src="/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png" className="h-16 w-16 text-primary" alt="MyImaginaryFriends.AI Logo" />
+          <Dog className="h-8 w-8 text-primary" aria-hidden="true" />
           <span className="text-xl font-bold tracking-tight text-foreground">
             MyImaginaryFriends.AI
           </span>
@@ -59,11 +59,14 @@ export function Header() {
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+                <Menu className="h-6 w-6" aria-hidden="true" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs p-6 pt-12 bg-background">
+              <SheetHeader className="mb-4">
+                <SheetTitle className="text-left">Navigation Menu</SheetTitle>
+              </SheetHeader>
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (
                   <NavLink key={item.href} {...item} />
@@ -76,3 +79,4 @@ export function Header() {
     </header>
   );
 }
+

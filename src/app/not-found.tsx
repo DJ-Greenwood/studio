@@ -23,6 +23,7 @@ export default function NotFound() {
       <p className="mb-6 text-2xl font-semibold text-foreground sm:text-3xl">
         Oops! Page Not Found
       </p>
+      <img src="/MyImaginaryFriends/Logo/Page-not-found.png" alt="Illustration indicating page not found" className="mb-8 max-w-full h-auto" />
       <p className="mb-10 max-w-xl text-lg text-muted-foreground sm:text-xl">
         It looks like the page you were trying to reach doesn&apos;t exist, or may have been moved.
         Don&apos;t worry, you can find your way back.
