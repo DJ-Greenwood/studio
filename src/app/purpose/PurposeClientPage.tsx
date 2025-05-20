@@ -6,8 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useToast } from "@/hooks/use-toast";
-import { Copy, Twitter, Facebook, Share2, Brain, Users, MessageSquareHeart, Sparkles } from "lucide-react"; // Added some icons for flavor
+import { Copy, Twitter, Facebook, Brain, Users, MessageSquareHeart, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const populationData = [
   { region: "Asia", population: "4.83 billion", source: "https://www.worldometers.info/world-population/asia-population/", estimatedSupport: "25%†", affected: "~1.21 billion" },
@@ -21,10 +22,21 @@ const populationData = [
 
 export default function PurposeClientPage() {
   const { toast } = useToast();
+  const [siteUrl, setSiteUrl] = useState<string>("");
+  const [shareText, setShareText] = useState<string>("");
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    const currentSiteUrl = window.location.origin + "/purpose";
+    setSiteUrl(currentSiteUrl);
+    setShareText("Discover the purpose behind MyImaginaryFriends.AI - AI for reflection, creativity, and emotional wellness: " + currentSiteUrl);
+  }, []);
+
 
   const handleCopyLink = () => {
-    if (typeof window !== "undefined") {
-      navigator.clipboard.writeText(window.location.origin + "/purpose")
+    if (siteUrl) {
+      navigator.clipboard.writeText(siteUrl)
         .then(() => {
           toast({ title: "Link Copied!", description: "The page URL has been copied to your clipboard." });
         })
@@ -34,10 +46,6 @@ export default function PurposeClientPage() {
         });
     }
   };
-
-  const siteUrl = typeof window !== "undefined" ? window.location.origin + "/purpose" : "https://myimaginaryfriends.ai/purpose";
-  const shareText = "Discover the purpose behind MyImaginaryFriends.AI - AI for reflection, creativity, and emotional wellness: " + siteUrl;
-
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
@@ -176,22 +184,22 @@ export default function PurposeClientPage() {
             </blockquote>
           </Card>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Button onClick={handleCopyLink} variant="outline">
+            <Button onClick={handleCopyLink} variant="outline" disabled={!isClient || !siteUrl}>
               <Copy className="mr-2 h-4 w-4" /> Copy This Link
             </Button>
-            <Button asChild variant="outline">
-              <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer">
+            <Button asChild variant="outline" disabled={!isClient || !shareText}>
+              <a href={isClient && shareText ? `https://wa.me/?text=${encodeURIComponent(shareText)}` : '#'} target="_blank" rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                 Share on WhatsApp
               </a>
             </Button>
-            <Button asChild variant="outline">
-              <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer">
+            <Button asChild variant="outline" disabled={!isClient || !shareText}>
+              <a href={isClient && shareText ? `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}` : '#'} target="_blank" rel="noopener noreferrer">
                 <Twitter className="mr-2 h-4 w-4" /> Post on X
               </a>
             </Button>
-            <Button asChild variant="outline">
-              <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}`} target="_blank" rel="noopener noreferrer">
+            <Button asChild variant="outline" disabled={!isClient || !siteUrl}>
+              <a href={isClient && siteUrl ? `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}` : '#'} target="_blank" rel="noopener noreferrer">
                 <Facebook className="mr-2 h-4 w-4" /> Share on Facebook
               </a>
             </Button>
