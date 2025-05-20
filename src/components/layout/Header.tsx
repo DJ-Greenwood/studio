@@ -1,11 +1,9 @@
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:3628436248.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:3309339658.
 
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, LayoutGrid, ShieldCheck, Dog, Menu } from "lucide-react"; // Removed Wand2
+import { Home, LayoutGrid, ShieldCheck, Dog, Menu, Sparkles } from "lucide-react"; 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -14,8 +12,8 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/apps-overview", label: "Apps", icon: LayoutGrid },
+  { href: "/purpose", label: "Purpose", icon: Sparkles }, // Added Purpose link
   { href: "/responsible-ai", label: "Responsible AI", icon: ShieldCheck },
-  // { href: "/marketing-generator", label: "Marketing AI", icon: Wand2 }, // Removed this line
 ];
 
 export function Header() {
