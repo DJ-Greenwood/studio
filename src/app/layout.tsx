@@ -13,7 +13,7 @@ const fontSans = FontSans({
 })
 
 const siteName = "MyImaginaryFriends.AI";
-const siteDescription = "MyImaginaryFriends.AI: Home of Bubbas.AI (emotional support journal) & BubbaStickers.AI (creative sticker generator). Explore ethical AI for reflection, creativity & growth.";
+const siteDescription = "MyImaginaryFriends.AI: Ethical AI companions for reflection & creativity. Discover Bubbas.AI (emotional support journal) & BubbaStickers.AI (sticker generator).";
 const siteKeywords = "AI companion, emotional support AI, creative AI tools, journaling app, sticker generator, ethical AI, responsible AI, MyImaginaryFriends.AI, Bubbas.AI, BubbaStickers.AI";
 const baseUrl = new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://myimaginaryfriends.ai');
 
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     url: baseUrl.toString(),
     siteName: siteName,
     title: `${siteName} | Ethical AI Companions & Creative Tools`,
-    description: siteDescription,
+    description: siteDescription, // Uses the shortened siteDescription
     images: [
       {
-        url: '/og-image.png', // Relative to metadataBase
+        url: '/og-image.png', // Relative to metadataBase - General fallback OG image
         width: 1200,
         height: 630,
         alt: `${siteName} - Ethical AI for Reflection and Creativity`,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${siteName} | Ethical AI Companions & Creative Tools`,
-    description: siteDescription,
+    description: siteDescription, // Uses the shortened siteDescription
     images: ['/og-image.png'], // Relative to metadataBase
     // site: '@YourTwitterHandle', // Optional: Add your Twitter handle
     // creator: '@CreatorTwitterHandle', // Optional
@@ -63,7 +63,6 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico', // Place your favicon.ico in the public folder
     // apple: '/apple-touch-icon.png', // Optional
-    //public/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png
   },
   manifest: '/site.webmanifest', // Optional: For PWA capabilities
 };

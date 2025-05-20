@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import ResponsibleAIClientPage from './ResponsibleAIClientPage'; 
 
-const pageTitle = "Responsible AI & Ethics Policy";
+const pageTitle = "Responsible AI & Ethics Policy | MyImaginaryFriends.AI";
 const pageDescription = "Learn about MyImaginaryFriends.AI's commitment to responsible AI, data privacy, ethical standards, and transparency in our AI applications like Bubbas.AI and BubbaStickers.AI.";
 const pageKeywords = "responsible AI, ethical AI, data privacy, AI transparency, AI safety, MyImaginaryFriends.AI ethics, AI policy";
 
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: '/responsible-ai',
-    type: 'article', // This is an article-like page
+    type: 'article', 
     images: [
       {
-        url: '/og-responsible-ai.png', // Specific OG image for this page
+        url: '/og-responsible-ai.png', 
         width: 1200,
         height: 630,
         alt: 'MyImaginaryFriends.AI Responsible AI and Ethics Policy',

@@ -2,8 +2,8 @@
 import type { Metadata } from 'next';
 import { MarketingGeneratorForm } from "@/components/marketing/MarketingGeneratorForm";
 
-const pageTitle = "AI Marketing Copy Generator";
-const pageDescription = "Craft compelling marketing campaigns effortlessly with MyImaginaryFriends.AI's AI-Powered Marketing Generator. Get unique copy, social media strategies, and more.";
+const pageTitle = "AI Marketing Copy Generator | MyImaginaryFriends.AI";
+const pageDescription = "Craft compelling marketing campaigns with MyImaginaryFriends.AI's AI-Powered Marketing Generator. Get unique copy, social media strategies, and more.";
 const pageKeywords = "AI marketing, marketing copy generator, AI content creation, social media strategy AI, campaign generator, MyImaginaryFriends.AI tools";
 
 export const metadata: Metadata = {
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: '/marketing-generator',
-    type: 'website', // Could be 'tool' if a more specific type exists
+    type: 'website', 
     images: [
       {
-        url: '/og-marketing-generator.png', // Specific OG image for this page
+        url: '/og-marketing-generator.png', 
         width: 1200,
         height: 630,
         alt: 'AI Marketing Copy Generator by MyImaginaryFriends.AI',

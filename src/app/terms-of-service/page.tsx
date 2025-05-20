@@ -5,7 +5,7 @@ import { AlertTriangle, Mail, CheckCircle, FileText } from "lucide-react";
 import Link from "next/link";
 
 const pageTitle = "MyImaginaryFriends.AI: Terms, Privacy, and Ethics Policy";
-const pageDescription = "Review the comprehensive Terms of Service, Privacy Policy, and Ethics Policy for MyImaginaryFriends.AI and its applications, including Bubbas.AI and BubbaStickers.AI. Understand your rights, our data handling practices, and ethical commitments.";
+const pageDescription = "Review the Terms of Service, Privacy, and Ethics Policy for MyImaginaryFriends.AI, including Bubbas.AI and BubbaStickers.AI. Understand your rights and our commitments.";
 const pageKeywords = "terms of service, privacy policy, ethics policy, MyImaginaryFriends.AI terms, Bubbas.AI terms, BubbaStickers.AI terms, user agreement, data rights, encryption policy, AI ethics";
 
 export const metadata: Metadata = {
@@ -150,7 +150,7 @@ export default function TermsOfServicePage() {
             <ul className="list-disc list-inside mt-3 space-y-2 text-muted-foreground">
               <li>Access, download, or delete your data at any time.</li>
               <li>Cancel or change your subscription whenever you wish.</li>
-              <li>Contact us with any questions or complaints at: <a href="mailto:Founder@myimaginaryfriends.ai" className="text-primary hover:underline">Founder@myimaginaryfriends.ai</a>.</li>
+              <li>Contact us with any questions or complaints at: <a href="mailto:Founder@myimaginaryfriends.ai" className="text-primary hover:underline">Founder@MyImaginaryFriends.ai</a>.</li>
             </ul>
           </Section>
 

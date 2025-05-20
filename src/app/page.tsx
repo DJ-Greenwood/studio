@@ -41,7 +41,7 @@ const coreValues = [
 ];
 
 const pageTitle = "MyImaginaryFriends.AI | Ethical AI for Reflection & Creativity";
-const pageDescription = "Discover MyImaginaryFriends.AI. We build AI tools like Bubbas.AI (emotional journal) and BubbaStickers.AI (sticker generator) to empower reflection, creativity, and growth, prioritizing privacy and ethics.";
+const pageDescription = "Discover MyImaginaryFriends.AI. We build AI tools like Bubbas.AI (emotional journal) and BubbaStickers.AI (sticker generator) to empower reflection, creativity, and growth.";
 const pageKeywords = "MyImaginaryFriends.AI, ethical AI, creative AI, Bubbas.AI, BubbaStickers.AI, AI journaling, AI sticker generator, emotional intelligence AI, responsible technology";
 
 export const metadata: Metadata = {
@@ -163,7 +163,7 @@ export default function HomePage() {
             {coreValues.map((value) => (
               <Card key={value.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
                 <CardHeader className="items-center text-center">
-                  <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
+                  <div className="p-3 rounded-full bg-primary/10 text-primary mb-3" aria-hidden="true">
                     <value.icon className="h-10 w-10" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-2xl font-semibold text-foreground">{value.title}</CardTitle>

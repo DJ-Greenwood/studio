@@ -1,10 +1,10 @@
 
 import type { Metadata } from 'next';
 import PurposeClientPage from './PurposeClientPage';
-import { Separator } from '@/components/ui/separator'; // Ensure Separator is available if used here, or move to client
+import { Separator } from '@/components/ui/separator';
 
-const pageTitle = "Our Purpose | MyImaginaryFriends.AI - Why We Build for Reflection & Connection";
-const pageDescription = "Discover the 'why' behind MyImaginaryFriends.AI. Learn about our mission to foster reflection, creativity, and emotional wellness in a world needing connection.";
+const pageTitle = "Our Purpose | MyImaginaryFriends.AI";
+const pageDescription = "Discover the 'why' behind MyImaginaryFriends.AI. Learn our mission to foster reflection, creativity, and emotional wellness in a world needing connection.";
 const pageKeywords = "MyImaginaryFriends.AI purpose, why we built AI, emotional wellness AI, AI for reflection, creative AI mission, mental health support, AI for connection";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/og-image.png', // Generic OG image, consider a specific one for this page
+        url: '/og-purpose.png', 
         width: 1200,
         height: 630,
         alt: 'The Purpose of MyImaginaryFriends.AI',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: ['/og-image.png'],
+    images: ['/og-purpose.png'],
   },
 };
 

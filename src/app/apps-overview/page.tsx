@@ -46,7 +46,7 @@ const apps = [
 ];
 
 const pageTitle = "Our AI Apps | Bubbas.AI & BubbaStickers.AI";
-const pageDescription = "Discover our creative AI apps: Bubbas.AI, your AI journal for emotional support, and BubbaStickers.AI, for generating unique stickers. Built by MyImaginaryFriends.AI.";
+const pageDescription = "Discover our creative AI apps: Bubbas.AI for emotional support journaling, and BubbaStickers.AI for unique sticker generation. Built by MyImaginaryFriends.AI.";
 const pageKeywords = "AI apps, Bubbas.AI, BubbaStickers.AI, AI journal, AI sticker generator, emotional support app, creative AI, MyImaginaryFriends.AI apps";
 
 export const metadata: Metadata = {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-apps-overview.png', // Specific OG image for this page
+        url: '/og-apps-overview.png', 
         width: 1200,
         height: 630,
         alt: 'Overview of MyImaginaryFriends.AI Apps',
