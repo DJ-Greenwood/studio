@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="mt-auto border-t border-border/40 bg-background/95 py-8">
       <div className="container mx-auto flex flex-col items-center justify-center px-4 text-center text-sm text-muted-foreground sm:px-6 lg:px-8">
         <div className="mb-3 flex items-center justify-center space-x-2 text-xs">
-          <AlertTriangle className="h-4 w-4 text-destructive/80" />
+          <AlertTriangle className="h-4 w-4 text-destructive/80" aria-hidden="true" />
           <span>Our AI tools are for support, not therapy.</span>
           <Link href="/responsible-ai#disclaimer" className="underline hover:text-primary transition-colors">
             Read full disclaimer.

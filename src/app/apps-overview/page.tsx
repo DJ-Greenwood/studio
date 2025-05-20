@@ -109,7 +109,7 @@ export default function AppsOverviewPage() {
               <div className="flex flex-col p-6 md:p-8">
                 <CardHeader className="p-0 mb-4">
                   <div className="flex items-center gap-3 mb-2">
-                    <app.icon className="h-10 w-10 text-primary" />
+                    <app.icon className="h-10 w-10 text-primary" aria-hidden="true" />
                     <CardTitle className="text-3xl font-bold text-foreground">{app.name}</CardTitle>
                   </div>
                   <CardDescription className="text-lg text-primary font-medium">{app.tagline}</CardDescription>
@@ -128,7 +128,7 @@ export default function AppsOverviewPage() {
                      {app.status}
                    </span>
                   <Button variant="ghost" className="text-primary hover:bg-primary/10">
-                    Learn More <Sparkles className="ml-2 h-4 w-4" />
+                    Learn More <Sparkles className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Button>
                 </CardFooter>
               </div>

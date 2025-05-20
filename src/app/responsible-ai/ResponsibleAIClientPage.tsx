@@ -74,7 +74,7 @@ export default function ResponsibleAIClientPage() {
     <div className="container mx-auto px-4 py-12 md:py-20">
       <div className="max-w-4xl mx-auto">
         <header className="mb-12 text-center">
-          <ShieldCheck className="h-20 w-20 text-primary mx-auto mb-6" />
+          <ShieldCheck className="h-20 w-20 text-primary mx-auto mb-6" aria-hidden="true" />
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
             Our Commitment to Responsible AI
           </h1>
@@ -86,7 +86,7 @@ export default function ResponsibleAIClientPage() {
         <Card id="disclaimer" className="mb-12 border-destructive bg-destructive/10">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <AlertTriangle className="h-8 w-8 text-destructive" />
+              <AlertTriangle className="h-8 w-8 text-destructive" aria-hidden="true" />
               <CardTitle className="text-2xl text-destructive">Disclaimer</CardTitle>
             </div>
           </CardHeader>
@@ -180,7 +180,7 @@ export default function ResponsibleAIClientPage() {
                           {policy.policyLinks.map(link => (
                             <li key={link.name}>
                               <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline flex items-center gap-1">
-                                {link.name} <ExternalLink className="h-3 w-3" />
+                                {link.name} <ExternalLink className="h-3 w-3" aria-hidden="true" />
                               </a>
                             </li>
                           ))}
@@ -201,7 +201,7 @@ export default function ResponsibleAIClientPage() {
             <ul className="list-none mt-4 space-y-2">
               {brandCommitments.map((commitment, index) => (
                 <li key={index} className="flex items-center gap-2 text-muted-foreground">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" aria-hidden="true" />
                   {commitment}
                 </li>
               ))}
@@ -238,7 +238,7 @@ function PolicySection({ icon: Icon, title, children }: PolicySectionProps) {
       <CardHeader>
         <div className="flex items-start gap-4">
           <div className="flex-shrink-0 p-3 bg-primary/10 text-primary rounded-full mt-1">
-            <Icon className="h-7 w-7" />
+            <Icon className="h-7 w-7" aria-hidden="true" />
           </div>
           <div>
             <CardTitle className="text-2xl font-semibold text-foreground mb-1">{title}</CardTitle>

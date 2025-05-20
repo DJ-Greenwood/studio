@@ -82,7 +82,7 @@ export function MarketingGeneratorForm() {
       <Card className="shadow-lg">
         <CardHeader>
           <CardTitle className="text-2xl flex items-center gap-2">
-            <Wand2 className="h-7 w-7 text-primary" />
+            <Wand2 className="h-7 w-7 text-primary" aria-hidden="true" />
             AI Marketing Copy Generator
           </CardTitle>
           <CardDescription>
@@ -170,12 +170,12 @@ export function MarketingGeneratorForm() {
               <Button type="submit" disabled={isLoading} className="w-full md:w-auto">
                 {isLoading ? (
                   <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
                     Generating...
                   </>
                 ) : (
                   <>
-                    <Wand2 className="mr-2 h-4 w-4" />
+                    <Wand2 className="mr-2 h-4 w-4" aria-hidden="true" />
                     Generate Copy
                   </>
                 )}
@@ -190,7 +190,7 @@ export function MarketingGeneratorForm() {
           <Card className="shadow-lg">
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-2">
-                <FileText className="h-6 w-6 text-primary" />
+                <FileText className="h-6 w-6 text-primary" aria-hidden="true" />
                 Generated Marketing Copy
               </CardTitle>
             </CardHeader>
@@ -202,7 +202,7 @@ export function MarketingGeneratorForm() {
           <Card className="shadow-lg">
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-2">
-                <Share2 className="h-6 w-6 text-primary" />
+                <Share2 className="h-6 w-6 text-primary" aria-hidden="true" />
                 Social Media Strategy
               </CardTitle>
             </CardHeader>
@@ -215,7 +215,7 @@ export function MarketingGeneratorForm() {
              <Card className="shadow-lg">
              <CardHeader>
                <CardTitle className="text-xl flex items-center gap-2">
-                 <Download className="h-6 w-6 text-primary" />
+                 <Download className="h-6 w-6 text-primary" aria-hidden="true" />
                  Downloadable Template
                </CardTitle>
              </CardHeader>

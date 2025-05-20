@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/apps-overview", label: "Apps", icon: LayoutGrid },
-  { href: "/purpose", label: "Purpose", icon: Sparkles }, // Added Purpose link
+  { href: "/purpose", label: "Purpose", icon: Sparkles }, 
   { href: "/responsible-ai", label: "Responsible AI", icon: ShieldCheck },
 ];
 
@@ -31,7 +31,7 @@ export function Header() {
             : "text-foreground/70"
         )}
       >
-        <Icon className="h-5 w-5" />
+        <Icon className="h-5 w-5" aria-hidden="true" />
         <span>{label}</span>
       </a>
     </Link>

@@ -74,7 +74,7 @@ export default function TermsOfServicePage() {
       />
       <div className="max-w-3xl mx-auto">
         <header className="mb-10 text-center">
-          <FileText className="h-16 w-16 text-primary mx-auto mb-4" />
+          <FileText className="h-16 w-16 text-primary mx-auto mb-4" aria-hidden="true" />
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
             MyImaginaryFriends.AI: Terms, Privacy, and Ethics Policy
           </h1>
@@ -114,7 +114,7 @@ export default function TermsOfServicePage() {
             <Card className="mt-6 border-destructive bg-destructive/10">
               <CardHeader>
                 <div className="flex items-center gap-3">
-                  <AlertTriangle className="h-7 w-7 text-destructive" />
+                  <AlertTriangle className="h-7 w-7 text-destructive" aria-hidden="true" />
                   <CardTitle className="text-xl text-destructive">Important Disclaimer</CardTitle>
                 </div>
               </CardHeader>
@@ -160,7 +160,7 @@ export default function TermsOfServicePage() {
               <li>End-to-end encryption: Your personal reflections, chats, and voice transcripts are encrypted before storage.</li>
               <li>Minimal data collection: We only collect what’s necessary to provide our services.</li>
               <li>
-                <strong>No "Dark Patterns":</strong> We do not use “dark patterns”—these are user interface designs or features that intentionally trick, pressure, or manipulate you into making choices you might not otherwise make, such as making it hard to cancel a subscription, hiding important information, or using confusing language to get you to share more data than you intend. We strive to make all choices clear, honest, and easy to understand.
+                <strong>No &quot;Dark Patterns&quot;:</strong> We do not use “dark patterns”—these are user interface designs or features that intentionally trick, pressure, or manipulate you into making choices you might not otherwise make, such as making it hard to cancel a subscription, hiding important information, or using confusing language to get you to share more data than you intend. We strive to make all choices clear, honest, and easy to understand.
               </li>
               <li>Transparency: We’ll always keep you informed about major updates.</li>
             </ul>
@@ -278,7 +278,7 @@ export default function TermsOfServicePage() {
           <Section title="17. Contact Us">
             <p>Questions, concerns, abuse reports, or data deletion requests?</p>
             <div className="flex items-center gap-2 mt-2">
-              <Mail className="h-5 w-5 text-primary" />
+              <Mail className="h-5 w-5 text-primary" aria-hidden="true" />
               <a href="mailto:Founder@MyImaginaryFriends.ai" className="text-primary hover:underline">
                 Founder@MyImaginaryFriends.ai
               </a>
@@ -322,7 +322,7 @@ export default function TermsOfServicePage() {
           <Card className="mt-10 bg-primary/5 border-primary/20">
             <CardContent className="pt-6">
               <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" aria-hidden="true" />
                 <p className="text-foreground">
                     By using our services, you agree to these terms and those of our partners (including Google and OpenAI). Thank you for being a thoughtful, imaginative part of our community!
                 </p>
@@ -352,5 +352,3 @@ function Section({ title, children, id }: SectionProps) {
     </section>
   );
 }
-
-    

@@ -39,7 +39,7 @@ const HeroAnimation: React.FC = () => {
   }
 
   return (
-    <div className="absolute inset-0 h-full w-full overflow-hidden pointer-events-none -z-10">
+    <div className="absolute inset-0 h-full w-full overflow-hidden pointer-events-none -z-10" aria-hidden="true">
       {stars.map((star) => (
         <div
           key={star.id}

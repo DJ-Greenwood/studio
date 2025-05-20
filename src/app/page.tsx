@@ -164,7 +164,7 @@ export default function HomePage() {
               <Card key={value.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
                 <CardHeader className="items-center text-center">
                   <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
-                    <value.icon className="h-10 w-10" />
+                    <value.icon className="h-10 w-10" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-2xl font-semibold text-foreground">{value.title}</CardTitle>
                 </CardHeader>
@@ -209,7 +209,7 @@ export default function HomePage() {
       {/* Summary Statement Section */}
       <section className="w-full py-16 md:py-24 bg-primary/10">
         <div className="container mx-auto px-4 text-center">
-          <Sparkles className="h-16 w-16 text-primary mx-auto mb-6" />
+          <Sparkles className="h-16 w-16 text-primary mx-auto mb-6" aria-hidden="true" />
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
             MyImaginaryFriends.AI is not just another AI company.
           </h2>
@@ -222,5 +222,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    

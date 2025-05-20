@@ -28,9 +28,12 @@ export default function PurposeClientPage() {
 
   useEffect(() => {
     setIsClient(true);
-    const currentSiteUrl = window.location.origin + "/purpose";
-    setSiteUrl(currentSiteUrl);
-    setShareText("Discover the purpose behind MyImaginaryFriends.AI - AI for reflection, creativity, and emotional wellness: " + currentSiteUrl);
+    // Ensure window-dependent code runs only on the client after mount
+    if (typeof window !== 'undefined') {
+      const currentSiteUrl = window.location.origin + "/purpose";
+      setSiteUrl(currentSiteUrl);
+      setShareText("Discover the purpose behind MyImaginaryFriends.AI - AI for reflection, creativity, and emotional wellness: " + currentSiteUrl);
+    }
   }, []);
 
 
@@ -51,7 +54,7 @@ export default function PurposeClientPage() {
     <div className="container mx-auto px-4 py-12 md:py-20">
       <div className="max-w-3xl mx-auto">
         <header className="mb-10 text-center">
-          <Sparkles className="h-16 w-16 text-primary mx-auto mb-4" />
+          <Sparkles className="h-16 w-16 text-primary mx-auto mb-4" aria-hidden="true" />
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
             Our Purpose
           </h1>
@@ -64,7 +67,7 @@ export default function PurposeClientPage() {
 
         <section className="space-y-4 mb-12">
           <h2 className="text-3xl font-semibold text-foreground flex items-center gap-2">
-            <Users className="h-8 w-8 text-primary" /> A World in Need of Reflection
+            <Users className="h-8 w-8 text-primary" aria-hidden="true" /> A World in Need of Reflection
           </h2>
           <p className="text-muted-foreground">
             There are over <strong>8 billion people</strong> in the world (Source: <a href="https://www.macrotrends.net/global-metrics/population/world-population" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Macrotrends, 2025</a>).
@@ -80,7 +83,7 @@ export default function PurposeClientPage() {
 
         <section className="space-y-4 mb-12">
           <h2 className="text-3xl font-semibold text-foreground flex items-center gap-2">
-            <Brain className="h-8 w-8 text-primary" /> Why We Built This
+            <Brain className="h-8 w-8 text-primary" aria-hidden="true" /> Why We Built This
           </h2>
           <p className="text-muted-foreground">
             As children, imaginary friends gave us space to think, feel, and explore without fear of judgment.
@@ -151,7 +154,7 @@ export default function PurposeClientPage() {
 
         <section className="space-y-4 mb-12">
           <h2 className="text-3xl font-semibold text-foreground flex items-center gap-2">
-            <MessageSquareHeart className="h-8 w-8 text-primary" /> The Power of a Gentle Share
+            <MessageSquareHeart className="h-8 w-8 text-primary" aria-hidden="true" /> The Power of a Gentle Share
           </h2>
           <p className="text-muted-foreground">
             We don’t believe in pressure. But we do believe in ripples.
@@ -185,22 +188,22 @@ export default function PurposeClientPage() {
           </Card>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Button onClick={handleCopyLink} variant="outline" disabled={!isClient || !siteUrl}>
-              <Copy className="mr-2 h-4 w-4" /> Copy This Link
+              <Copy className="mr-2 h-4 w-4" aria-hidden="true" /> Copy This Link
             </Button>
             <Button asChild variant="outline" disabled={!isClient || !shareText}>
               <a href={isClient && shareText ? `https://wa.me/?text=${encodeURIComponent(shareText)}` : '#'} target="_blank" rel="noopener noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                 Share on WhatsApp
               </a>
             </Button>
             <Button asChild variant="outline" disabled={!isClient || !shareText}>
               <a href={isClient && shareText ? `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}` : '#'} target="_blank" rel="noopener noreferrer">
-                <Twitter className="mr-2 h-4 w-4" /> Post on X
+                <Twitter className="mr-2 h-4 w-4" aria-hidden="true" /> Post on X
               </a>
             </Button>
             <Button asChild variant="outline" disabled={!isClient || !siteUrl}>
               <a href={isClient && siteUrl ? `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}` : '#'} target="_blank" rel="noopener noreferrer">
-                <Facebook className="mr-2 h-4 w-4" /> Share on Facebook
+                <Facebook className="mr-2 h-4 w-4" aria-hidden="true" /> Share on Facebook
               </a>
             </Button>
           </div>
@@ -210,7 +213,7 @@ export default function PurposeClientPage() {
 
         <section className="space-y-4 text-center">
           <h2 className="text-3xl font-semibold text-foreground flex items-center gap-2 justify-center">
-             <Sparkles className="h-8 w-8 text-primary" /> Why &quot;MyImaginaryFriends.AI&quot;?
+             <Sparkles className="h-8 w-8 text-primary" aria-hidden="true" /> Why &quot;MyImaginaryFriends.AI&quot;?
           </h2>
           <p className="text-muted-foreground">
             Because imagination is how we begin to heal.
@@ -234,4 +237,3 @@ export default function PurposeClientPage() {
     </div>
   );
 }
-
