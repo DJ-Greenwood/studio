@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     url: baseUrl.toString(),
     siteName: siteName,
     title: `${siteName} | Ethical AI Companions & Creative Tools`,
-    description: siteDescription, // Uses the shortened siteDescription
+    description: siteDescription,
     images: [
       {
-        url: '/og-image.png', // Relative to metadataBase - General fallback OG image
+        url: '/og-image.png', 
         width: 1200,
         height: 630,
         alt: `${siteName} - Ethical AI for Reflection and Creativity`,
@@ -44,10 +44,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${siteName} | Ethical AI Companions & Creative Tools`,
-    description: siteDescription, // Uses the shortened siteDescription
-    images: ['/og-image.png'], // Relative to metadataBase
-    // site: '@YourTwitterHandle', // Optional: Add your Twitter handle
-    // creator: '@CreatorTwitterHandle', // Optional
+    description: siteDescription,
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -61,10 +59,10 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico', // Place your favicon.ico in the public folder
-    // apple: '/apple-touch-icon.png', // Optional
+    icon: '/favicon.ico',
+    apple: '/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png', // Updated to use main logo
   },
-  manifest: '/site.webmanifest', // Optional: For PWA capabilities
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
