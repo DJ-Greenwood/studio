@@ -46,8 +46,8 @@ export function Header() {
           <Image
             src="/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png"
             alt="MyImaginaryFriends.AI Logo"
-            width={32}
-            height={32}
+            width={64}
+            height={64}
             aria-hidden="true"
           />
           <span className="text-xl font-bold tracking-tight text-foreground">

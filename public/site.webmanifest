@@ -1,12 +1,7 @@
 {
   "name": "MyImaginaryFriends.AI",
   "short_name": "MIF.AI",
-  "description": "MyImaginaryFriends.AI: Ethical AI companions for reflection & creativity. Discover Bubbas.AI (emotional support journal) & BubbaStickers.AI (sticker generator).",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#FAF7FF",
-  "theme_color": "#7C3AED",
-  "orientation": "portrait-primary",
+  "description": "Ethical AI companions for reflection & creativity. Discover Bubbas.AI (emotional support journal) & BubbaStickers.AI (sticker generator).",
   "icons": [
     {
       "src": "/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo_192.png",
@@ -20,5 +15,10 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "theme_color": "#F3EFFF",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
 }
