@@ -71,6 +71,7 @@ export default function TermsOfServicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        aria-hidden="true"
       />
       <div className="max-w-3xl mx-auto">
         <header className="mb-10 text-center">
@@ -305,16 +306,65 @@ export default function TermsOfServicePage() {
           </Section>
 
           <Section title="19. Global Crisis Lines" id="global-crisis-lines">
-            <ul className="space-y-2 text-muted-foreground">
-                <li><strong>United States:</strong> 988 Suicide & Crisis Lifeline — Call or text 988</li>
-                <li><strong>Canada:</strong> Talk Suicide Canada — Call 1-833-456-4566</li>
-                <li><strong>United Kingdom:</strong> Samaritans — Call 116 123</li>
-                <li><strong>Australia:</strong> Lifeline Australia — Call 13 11 14</li>
-                <li><strong>New Zealand:</strong> Lifeline NZ — Call 0800 543 354</li>
-                <li><strong>India:</strong> iCall — Email or call +91 9152987821</li>
-                <li><strong>Germany:</strong> TelefonSeelsorge — Call 0800 1110111</li>
-                <li><strong>France:</strong> SOS Amitié — Call 09 72 39 40 50</li>
-                <li><strong>South Africa:</strong> SADAG — Call 0800 456 789</li>
+            <ul className="space-y-4 text-muted-foreground">
+              <li>
+                <p className="font-semibold text-foreground mb-0.5">🇺🇸 United States</p>
+                <p className="text-sm">988 Suicide & Crisis Lifeline</p>
+                <p className="text-sm">📞 Call or text 988</p>
+                <p className="text-sm">🌐 <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://988lifeline.org</a></p>
+              </li>
+              <li>
+                <p className="font-semibold text-foreground mb-0.5">🇨🇦 Canada</p>
+                <p className="text-sm">Talk Suicide Canada</p>
+                <p className="text-sm">📞 Call 1-833-456-4566</p>
+                <p className="text-sm">💬 Text 45645 (Available 4PM–Midnight ET)</p>
+                <p className="text-sm">🌐 <a href="https://talksuicide.ca" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://talksuicide.ca</a></p>
+              </li>
+              <li>
+                <p className="font-semibold text-foreground mb-0.5">🇬🇧 United Kingdom</p>
+                <p className="text-sm">Samaritans</p>
+                <p className="text-sm">📞 Call 116 123</p>
+                <p className="text-sm">🌐 <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.samaritans.org</a></p>
+              </li>
+              <li>
+                <p className="font-semibold text-foreground mb-0.5">🇦🇺 Australia</p>
+                <p className="text-sm">Lifeline Australia</p>
+                <p className="text-sm">📞 Call 13 11 14</p>
+                <p className="text-sm">🌐 <a href="https://www.lifeline.org.au" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.lifeline.org.au</a></p>
+              </li>
+              <li>
+                <p className="font-semibold text-foreground mb-0.5">🇳🇿 New Zealand</p>
+                <p className="text-sm">Lifeline Aotearoa</p>
+                <p className="text-sm">📞 Call 0800 543 354</p>
+                <p className="text-sm">💬 Text HELP to 4357</p>
+                <p className="text-sm">🌐 <a href="https://www.lifeline.org.nz" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.lifeline.org.nz</a></p>
+              </li>
+              <li>
+                <p className="font-semibold text-foreground mb-0.5">🇮🇳 India</p>
+                <p className="text-sm">iCall (TISS)</p>
+                <p className="text-sm">📞 +91 9152987821</p>
+                <p className="text-sm">📧 icall@tiss.edu</p>
+                <p className="text-sm">🌐 <a href="https://icallhelpline.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://icallhelpline.org</a></p>
+              </li>
+              <li>
+                <p className="font-semibold text-foreground mb-0.5">🇩🇪 Germany</p>
+                <p className="text-sm">TelefonSeelsorge</p>
+                <p className="text-sm">📞 0800 1110111, 0800 1110222, or 116 123</p>
+                <p className="text-sm">🌐 <a href="https://www.telefonseelsorge.de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.telefonseelsorge.de</a></p>
+              </li>
+              <li>
+                <p className="font-semibold text-foreground mb-0.5">🇫🇷 France</p>
+                <p className="text-sm">SOS Amitié</p>
+                <p className="text-sm">📞 09 72 39 40 50</p>
+                <p className="text-sm">🌐 <a href="https://www.sos-amitie.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.sos-amitie.com</a></p>
+              </li>
+              <li>
+                <p className="font-semibold text-foreground mb-0.5">🇿🇦 South Africa</p>
+                <p className="text-sm">SADAG (South African Depression and Anxiety Group)</p>
+                <p className="text-sm">📞 0800 567 567 (Suicide Helpline)</p>
+                <p className="text-sm">📞 0800 456 789 (Cipla Mental Health Line)</p>
+                <p className="text-sm">🌐 <a href="https://www.sadag.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.sadag.org</a></p>
+              </li>
             </ul>
           </Section>
 
@@ -352,3 +402,5 @@ function Section({ title, children, id }: SectionProps) {
     </section>
   );
 }
+
+    

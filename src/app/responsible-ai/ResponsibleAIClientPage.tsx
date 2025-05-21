@@ -5,6 +5,7 @@ import { ShieldCheck, Users, Lock, Brain, AlertTriangle, CheckCircle, ExternalLi
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Link from "next/link";
+import React from "react"; // Added for React.Fragment
 import {
   Dialog,
   DialogContent,
@@ -58,16 +59,84 @@ const brandCommitments = [
 ];
 
 const crisisLinesData = [
-  { country: "United States", info: "988 Suicide & Crisis Lifeline — Call or text 988" },
-  { country: "Canada", info: "Talk Suicide Canada — Call 1-833-456-4566" },
-  { country: "United Kingdom", info: "Samaritans — Call 116 123" },
-  { country: "Australia", info: "Lifeline Australia — Call 13 11 14" },
-  { country: "New Zealand", info: "Lifeline NZ — Call 0800 543 354" },
-  { country: "India", info: "iCall — Email or call +91 9152987821" },
-  { country: "Germany", info: "TelefonSeelsorge — Call 0800 1110111" },
-  { country: "France", info: "SOS Amitié — Call 09 72 39 40 50" },
-  { country: "South Africa", info: "SADAG — Call 0800 456 789" },
+  {
+    country: "🇺🇸 United States",
+    infoLines: [
+      "988 Suicide & Crisis Lifeline",
+      "📞 Call or text 988",
+      <React.Fragment key="us-web">🌐 <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">https://988lifeline.org</a></React.Fragment>
+    ],
+  },
+  {
+    country: "🇨🇦 Canada",
+    infoLines: [
+      "Talk Suicide Canada",
+      "📞 Call 1-833-456-4566",
+      "💬 Text 45645 (Available 4PM–Midnight ET)",
+      <React.Fragment key="ca-web">🌐 <a href="https://talksuicide.ca" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">https://talksuicide.ca</a></React.Fragment>
+    ],
+  },
+  {
+    country: "🇬🇧 United Kingdom",
+    infoLines: [
+      "Samaritans",
+      "📞 Call 116 123",
+      <React.Fragment key="uk-web">🌐 <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">https://www.samaritans.org</a></React.Fragment>
+    ],
+  },
+  {
+    country: "🇦🇺 Australia",
+    infoLines: [
+      "Lifeline Australia",
+      "📞 Call 13 11 14",
+      <React.Fragment key="au-web">🌐 <a href="https://www.lifeline.org.au" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">https://www.lifeline.org.au</a></React.Fragment>
+    ],
+  },
+  {
+    country: "🇳🇿 New Zealand",
+    infoLines: [
+      "Lifeline Aotearoa",
+      "📞 Call 0800 543 354",
+      "💬 Text HELP to 4357",
+      <React.Fragment key="nz-web">🌐 <a href="https://www.lifeline.org.nz" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">https://www.lifeline.org.nz</a></React.Fragment>
+    ],
+  },
+  {
+    country: "🇮🇳 India",
+    infoLines: [
+      "iCall (TISS)",
+      "📞 +91 9152987821",
+      "📧 icall@tiss.edu",
+      <React.Fragment key="in-web">🌐 <a href="https://icallhelpline.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">https://icallhelpline.org</a></React.Fragment>
+    ],
+  },
+  {
+    country: "🇩🇪 Germany",
+    infoLines: [
+      "TelefonSeelsorge",
+      "📞 0800 1110111, 0800 1110222, or 116 123",
+      <React.Fragment key="de-web">🌐 <a href="https://www.telefonseelsorge.de" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">https://www.telefonseelsorge.de</a></React.Fragment>
+    ],
+  },
+  {
+    country: "🇫🇷 France",
+    infoLines: [
+      "SOS Amitié",
+      "📞 09 72 39 40 50",
+      <React.Fragment key="fr-web">🌐 <a href="https://www.sos-amitie.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">https://www.sos-amitie.com</a></React.Fragment>
+    ],
+  },
+  {
+    country: "🇿🇦 South Africa",
+    infoLines: [
+      "SADAG (South African Depression and Anxiety Group)",
+      "📞 0800 567 567 (Suicide Helpline)",
+      "📞 0800 456 789 (Cipla Mental Health Line)",
+      <React.Fragment key="za-web">🌐 <a href="https://www.sadag.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">https://www.sadag.org</a></React.Fragment>
+    ],
+  },
 ];
+
 
 export default function ResponsibleAIClientPage() {
   return (
@@ -107,11 +176,18 @@ export default function ResponsibleAIClientPage() {
                       If you or someone you know is in crisis, please reach out to one of these resources. This list is not exhaustive.
                     </DialogDescription>
                   </DialogHeader>
-                  <div className="mt-4 space-y-3 max-h-[60vh] overflow-y-auto pr-2">
+                  <div className="mt-4 space-y-2 max-h-[60vh] overflow-y-auto pr-2">
                     {crisisLinesData.map((line) => (
-                      <div key={line.country}>
-                        <p className="font-semibold text-foreground">{line.country}:</p>
-                        <p className="text-sm text-muted-foreground">{line.info}</p>
+                       <div key={line.country} className="mb-3">
+                        <p className="font-semibold text-foreground">{line.country}</p>
+                        <div className="text-sm text-muted-foreground">
+                          {line.infoLines.map((info, index) => (
+                            <React.Fragment key={index}>
+                              {info}
+                              {index < line.infoLines.length - 1 && <br />}
+                            </React.Fragment>
+                          ))}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -179,7 +255,7 @@ export default function ResponsibleAIClientPage() {
                         <ul className="space-y-1">
                           {policy.policyLinks.map(link => (
                             <li key={link.name}>
-                              <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline flex items-center gap-1">
+                              <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline flex items-center gap-1" aria-hidden="true">
                                 {link.name} <ExternalLink className="h-3 w-3" aria-hidden="true" />
                               </a>
                             </li>
@@ -237,7 +313,7 @@ function PolicySection({ icon: Icon, title, children }: PolicySectionProps) {
     <Card className="shadow-lg">
       <CardHeader>
         <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 p-3 bg-primary/10 text-primary rounded-full mt-1">
+          <div className="flex-shrink-0 p-3 bg-primary/10 text-primary rounded-full mt-1" aria-hidden="true">
             <Icon className="h-7 w-7" aria-hidden="true" />
           </div>
           <div>
@@ -251,3 +327,5 @@ function PolicySection({ icon: Icon, title, children }: PolicySectionProps) {
     </Card>
   );
 }
+
+    
