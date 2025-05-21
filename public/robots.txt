@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /site.webmanifest
+Allow: /MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo_192.png
+Allow: /MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo_512.png
+Allow: /MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png
+Allow: /favicon.ico
+
+# Sitemap (you'll need to generate and add sitemap.xml)
+Sitemap: https://myimaginaryfriends.ai/sitemap.xml
