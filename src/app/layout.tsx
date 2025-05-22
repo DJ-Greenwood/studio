@@ -59,8 +59,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png', // Updated to use main logo
+ icon: '/MyImaginaryFriends/favicon.ico',
+    apple: '/MyImaginaryFriends/Logo/MyImaginaryFrieds.AI.Logo.png', // Updated to use main logo 
   },
   manifest: '/site.webmanifest',
 };
