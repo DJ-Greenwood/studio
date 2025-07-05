@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, LayoutGrid, ShieldCheck, Menu, Sparkles } from "lucide-react";
+import { Home, LayoutGrid, ShieldCheck, Menu, Sparkles, UserRound } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -14,6 +14,7 @@ const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/apps-overview", label: "Apps", icon: LayoutGrid },
   { href: "/purpose", label: "Purpose", icon: Sparkles },
+  { href: "/founder", label: "Founder", icon: UserRound },
   { href: "/responsible-ai", label: "Responsible AI", icon: ShieldCheck },
 ];
 

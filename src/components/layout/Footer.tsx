@@ -17,19 +17,14 @@ export function Footer() {
         <p className="mb-2">&copy; 2025 MyImaginaryFriends.AI LLC. All rights reserved.</p>
         <div className="flex items-center space-x-3 text-xs mb-3">
           <Link href="/terms-of-service" className="hover:text-primary transition-colors">
-            Terms of Service
-          </Link>
-          <span className="text-muted-foreground/50" aria-hidden="true">•</span>
-          {/* Privacy Policy is covered within the Terms of Service page */}
-          <Link href="/terms-of-service" className="hover:text-primary transition-colors">
-            Privacy Policy
+            Terms of Service & Privacy Policy
           </Link>
           <span className="text-muted-foreground/50" aria-hidden="true">•</span>
           <Link href="/responsible-ai" className="hover:text-primary transition-colors">
-            Ethics & AI Policy
+            Responsible AI Commitment & Ethics Statement
           </Link>
         </div>
-        <p className="text-xs text-muted-foreground/80">Powered by GenAI and Next.js</p>
+        <p className="text-xs text-muted-foreground/80">Powered by Next.js hosted on Firebase</p>
       </div>
     </footer>
   );
