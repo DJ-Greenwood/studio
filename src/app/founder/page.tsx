@@ -41,20 +41,27 @@ export default function FounderPage() {
       <section className="mb-12 space-y-4">
         <h2 className="text-3xl font-semibold text-foreground">Why I Built This</h2>
         <div className="text-muted-foreground space-y-4 text-lg">
-            <p>
-                This project started in the middle of a crisis — not a pitch deck. I was burned out, stretched thin, and questioning everything.
-            </p>
-            <p>
-                When I built the first AI journaling tool to help myself think through it, something clicked.
-            </p>
-            <p className="font-semibold text-foreground">
-                From that clarity came a bigger vision:
-                <br />
-                What if we built tools that helped <em>anyone</em> reflect deeply — not just high-performers, but everyday people, kids, creatives, and caretakers?
-            </p>
-            <p>
-                MyImaginaryFriends.ai isn’t about escaping reality. It’s about helping you face it… with perspective.
-            </p>
+        <p>
+          This began as a personal proof of concept during my Master's in Data Science — a challenge to identify a real problem and solve it with measurable, human-centered results.
+        </p>
+        <p>
+          But life doesn’t pause for academic timelines. In the middle of that pursuit, I found myself navigating unexpected challenges — and realized the journey itself was the insight.
+        </p>
+        <p>
+          I built a simple AI journaling tool to help myself think clearly through the chaos — and something clicked.
+        </p>
+        <p className="font-semibold text-foreground">
+          That clarity sparked a bigger question:
+          <br />
+          What if we created tools that helped <em>anyone</em> reflect deeply — not just high performers, but everyday people, kids, creatives, and caretakers?
+        </p>
+        <p>
+          MyImaginaryFriends.ai was born from that vision. It’s not about escaping reality — it’s about helping you face it, with perspective.
+        </p>
+        <p>
+          What started as a playful prompt — to simulate the warm, loyal energy of my Yorkie companion — has grown into an evolving ecosystem of emotional AI tools. Tools that, one day soon, may not just support individuals, but contribute meaningfully to the well-being of humanity as a whole.
+        </p>
+
         </div>
       </section>
 
@@ -145,15 +152,12 @@ export default function FounderPage() {
       <section className="mb-12 space-y-4">
         <h2 className="text-3xl font-semibold text-foreground">Looking Ahead</h2>
         <div className="text-muted-foreground space-y-4 text-lg">
-            <p>
-                As this platform evolves, I envision building a small team of facilitators and collaborators who can bring this work into organizations and group settings.
-            </p>
-            <p>
-                For now, <strong>every experience is crafted and guided personally by me.</strong>
-            </p>
-            <p>
-                If it resonates with you, join the journey — and let’s build something meaningful.
-            </p>
+        <p>
+          As this platform evolves, I am currently focusing on building out the <Link href="https://cognitiveinsight.ai" className="text-primary hover:underline font-medium">Cognitive Insight AI</Link> site.
+        </p>
+        <p>
+          Landing pages for <Link href="https://bubbas.ai" className="text-primary hover:underline font-medium">Bubbas.AI</Link> and <Link href="https://bubbastickers.ai" className="text-primary hover:underline font-medium">BubbaStickers.AI</Link> are also in the works to provide dedicated spaces for these tools.
+        </p>
         </div>
       </section>
 
@@ -167,7 +171,7 @@ export default function FounderPage() {
             <Mail className="h-5 w-5" />
             founder@myimaginaryfriends.ai
           </a>
-          <a href="#" className="flex items-center gap-2 text-primary hover:underline">
+          <a href="https://www.linkedin.com/in/denzil-james-greenwood" className="flex items-center gap-2 text-primary hover:underline" target="_blank" rel="noopener noreferrer">
             <Linkedin className="h-5 w-5" />
             LinkedIn
           </a>
