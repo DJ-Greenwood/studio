@@ -108,6 +108,10 @@ export default function HomePage() {
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             MyImaginaryFriends.AI
           </h1>
+          <p className="mt-4 text-lg font-semibold text-primary sm:text-xl md:text-2xl">
+            Where AI Helps You Feel More Human
+          </p>
+          <p className="mt-2 text-sm text-muted-foreground italic">A MyImaginaryFriends.ai Studio</p>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl md:text-2xl">
             We create digital tools that empower users to reflect deeply, express creatively, and grow intentionally — all while respecting privacy and ethical standards.
           </p>

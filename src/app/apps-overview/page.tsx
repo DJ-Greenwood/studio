@@ -85,6 +85,7 @@ export default function AppsOverviewPage() {
         <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
           Our Creative AI Apps
         </h1>
+        <p className="mt-2 text-md text-primary font-semibold">Brought to you by MyImaginaryFriends.ai — where imagination meets intentional AI design.</p>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground sm:text-xl">
           Discover the innovative AI-powered applications we're building to spark imagination, support reflection, and bring joy.
         </p>

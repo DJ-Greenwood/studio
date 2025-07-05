@@ -77,6 +77,9 @@ export default function PurposeClientPage() {
           <p className="text-muted-foreground">
             We created <strong>MyImaginaryFriends.AI</strong> as a gentle answer to that silence.
           </p>
+          <p className="text-muted-foreground mt-2 font-medium">
+            MyImaginaryFriends.ai is the home of these tools—designed under a unified vision of ethical, reflective technology.
+          </p>
         </section>
 
         <Separator className="my-8" />
@@ -233,8 +236,16 @@ export default function PurposeClientPage() {
             They’re <strong>better</strong> — because they’re <strong>yours.</strong>
           </p>
         </section>
+
+        <Separator className="my-8" />
+        
+        <section className="text-center">
+          <p className="text-muted-foreground">
+            Visit our <Link href="/" className="text-primary hover:underline">parent site</Link> to explore our full suite of apps and learn about our responsible AI commitment.
+          </p>
+        </section>
+
       </div>
     </div>
   );
 }
-

@@ -13,19 +13,23 @@ export function Footer() {
             Read full disclaimer.
           </Link>
         </div>
-        <p className="mb-1">
-          Bubbas.AI and BubbaStickers.AI are products of MyImaginaryFriends.AI LLC, a registered company dedicated to building emotionally supportive and creative AI tools.
-        </p>
+        <p className="mb-2">A product of <a href="https://www.MyImaginaryFriends.ai" className="underline hover:text-primary">MyImaginaryFriends.ai</a>—our parent company focused on human-first AI.</p>
         <p className="mb-2">&copy; 2025 MyImaginaryFriends.AI LLC. All rights reserved.</p>
-        <p className="text-xs mb-2">Powered by GenAI and Next.js</p>
-        <div className="flex space-x-4">
-          <Link href="/responsible-ai" className="hover:text-primary transition-colors">
-            Responsible AI Policy
-          </Link>
+        <div className="flex items-center space-x-3 text-xs mb-3">
           <Link href="/terms-of-service" className="hover:text-primary transition-colors">
             Terms of Service
           </Link>
+          <span className="text-muted-foreground/50" aria-hidden="true">•</span>
+          {/* Privacy Policy is covered within the Terms of Service page */}
+          <Link href="/terms-of-service" className="hover:text-primary transition-colors">
+            Privacy Policy
+          </Link>
+          <span className="text-muted-foreground/50" aria-hidden="true">•</span>
+          <Link href="/responsible-ai" className="hover:text-primary transition-colors">
+            Ethics & AI Policy
+          </Link>
         </div>
+        <p className="text-xs text-muted-foreground/80">Powered by GenAI and Next.js</p>
       </div>
     </footer>
   );

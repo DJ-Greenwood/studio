@@ -147,6 +147,7 @@ export default function ResponsibleAIClientPage() {
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
             Our Commitment to Responsible AI
           </h1>
+          <p className="mt-2 text-md text-primary font-semibold">As a MyImaginaryFriends.ai initiative, we center privacy, ethics, and emotional integrity in every AI experience.</p>
           <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
             At MyImaginaryFriends.AI, we build digital tools that empower you to reflect, create, and grow—while upholding the highest standards of privacy and ethics.
           </p>
@@ -327,5 +328,3 @@ function PolicySection({ icon: Icon, title, children }: PolicySectionProps) {
     </Card>
   );
 }
-
-    
